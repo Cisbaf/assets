@@ -1,0 +1,102 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Relatorios Municipal</title>
+<style></style>
+</head>
+<body>
+    <div id="messages" style="background-color:transparent;"></div>
+    <section id="login">
+        <aside>
+            <form id="form-x">
+                <h1>Login</h1>
+                <br>
+                <div class="form-group">
+                    <input id="user" class="form-field" type="text" placeholder="Usuário">
+                </div>
+                <br>
+                <div class="form-group">
+                    <input id="pass" class="form-field" type="password" placeholder="Senha">
+                </div>
+                <br>
+                <button class="button-login" type="button" onclick="Login();">Acessar</button>
+            </form>
+        </aside>
+    </section>
+
+    <section id="dash">
+        <section id="dash">
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <button>Indicador de Estrutura</button>
+                        <div class="dropdown-menu">
+                            <button onclick="UpdateDashBoard('p_sbunr82lkd', true)">
+                                Disponibilidade de Viatura</button>
+                        </div>            
+                    </li>
+                    <li class="dropdown">
+                        <button>Indicadores de Processo</button>
+                        <div class="dropdown-menu">
+                            <button onclick="UpdateDashBoard('p_t3rrx82lkd')">
+                                Tipos de Chamadas</button>
+                            <button onclick="UpdateDashBoard('p_2pwdma3lkd')">
+                                Unidades Solicitantes - Vaga Zero</button>
+                            <button onclick="UpdateDashBoard('')" disabled>
+                                Classificação de Risco e Regulações</button>
+                            <button onclick="UpdateDashBoard('')" disabled>
+                                Saídas de Viaturas</button>
+                            <button onclick="UpdateDashBoard('')" disabled>
+                                Envios em Conduta Médica</button>
+                            <button onclick="UpdateDashBoard('')" disabled>
+                                Tipos de Estabelecimento</button>
+                            <button onclick="UpdateDashBoard('')" disabled>
+                                Destino</button>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button>Indicador de Resultado</button>
+                        <div class="dropdown-menu">
+                            <button onclick="UpdateDashBoard('')" disabled>
+                                Tempo Resposta</button>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <button>Indicador de Morbidade</button>
+                        <div class="dropdown-menu">
+                            <button onclick="UpdateDashBoard('')" disabled>
+                                Serviço 7</button>
+                        </div>            
+                    </li>
+                    <li class="dropdown">
+                        <button>Indicadores Demográficos</button>
+                        <div class="dropdown-menu">
+                            <button onclick="UpdateDashBoard('')" disabled>
+                                Segmento de Tempo - Chamado</button>
+                            <button onclick="UpdateDashBoard('')" disabled>
+                                Segmento de Tempo - Envio</button>
+                            <button onclick="UpdateDashBoard('')" disabled>
+                                Sexo e Idade do Paciente</button>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        
+        <div style="display:flex;flex-direction: column;justify-content: center;">
+            <iframe
+                id="lookerIframe"
+                src=""
+                style="width: 99vw; height: 90vh; border: none;">
+            </iframe>
+        </div>
+    </section>
+
+     <script></script>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+footer {
+    background: #1a81c7;
+    position: relative;
+    font-weight: 400;
+    overflow: hidden;
+    display: block
+}
+
+footer div:not(.overlay) {
+    z-index: 10
+}
+
+.footer-barra01 {
+    width: auto;
+    height: auto;
+    padding: 0 0;
+    overflow: hidden;
+    margin: 20px;
+    border-radius: 10px
+}
+
+.footer-barra01 .menu {
+    width: 100%;
+    height: auto;
+    color: #fff;
+    overflow: hidden;
+    display: block;
+    margin-bottom: 20px
+}
+
+.footer-barra01 .menu h4 {
+    color: var(--main-color-base-footer-primaria);
+    padding: 10px 0 5px;
+    font-size: 20px;
+    font-weight: 500
+}
+
+.footer-barra01 .menu ul {
+    width: 100%;
+    height: auto;
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.footer-barra01 .menu ul li {
+    width: 100%;
+    float: left
+}
+
+.footer-barra01 .menu ul li a {
+    font-size: 13px;
+    color: var(--main-color-base-footer-secundaria);
+    transition: .3s
+}
+
+.footer-barra01 .menu ul li a:hover {
+    color: var(--main-color-base-footer-secundaria-hover)
+}
+
+.footer-barra02 {
+    width: 100%;
+    height: auto;
+    padding: 5px 0;
+    overflow: hidden
+}
+
+.footer-barra02 .menu {
+    width: 100%;
+    height: auto;
+    color: #fff
+}
+
+.footer-barra02 .menu h4 {
+    color: var(--main-color-base-footer-primaria);
+    padding: 0 0 10px;
+    font-size: 20px;
+    font-weight: 500
+}
+
+.footer-barra02 .menu .texto {
+    width: 100%;
+    height: auto;
+    display: block;
+    font-size: 14px;
+    color: var(--main-color-base-footer-secundaria);
+    padding: 0 0 10px
+}
+
+.footer-barra02 .menu .contato-rodape {
+    font-size: 16px;
+    color: var(--main-color-base-footer-primaria)
+}
+
+.footer-barra02 .menu .bt-rodape {
+    width: 100%;
+    color: #fff;
+    background-color: var(--main-bg-base-bt-rodape);
+    margin-left: 0;
+    transition: .3s
+}
+
+.footer-barra02 .menu .bt-rodape:hover {
+    background-color: var(--main-bg-base-bt-rodape-hover)
+}
+
+.footer-barra02 ul {
+    list-style: none;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    margin-top: 30px;
+    display: block;
+    overflow: hidden;
+    margin-bottom: 20px
+}
+
+.footer-barra02 ul li {
+    width: 50px;
+    float: left;
+    margin-right: 10px
+}
+
+.footer-barra02 ul li a {
+    width: 100%;
+    display: block;
+    font-size: 18px;
+    padding: 7px 14px;
+    text-align: center;
+    color: #fff;
+    background-color: var(--main-bg-base-bt-rodape);
+    transition: .3s
+}
+
+.footer-barra02 ul li a:hover {
+    background-color: var(--main-bg-base-bt-rodape-hover)
+}
+
+.footer-barra03 {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    padding: 10px;
+    margin: 15px;
+    background-color: #18478d;
+    border-radius: 10px
+}
+
+.footer-barra03 .copyright {
+    text-align: center;
+    color: #fff;
+    padding: 10px 0 5px;
+    font-size: 14px
+}

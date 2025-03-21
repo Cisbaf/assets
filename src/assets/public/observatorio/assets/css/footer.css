@@ -1,0 +1,229 @@
+footer {
+    background-color: #105685;
+    margin-top: 0
+}
+
+footer .caixa-principal {
+    padding-top: 25px;
+    padding-bottom: 25px
+}
+
+footer .caixa-logo {
+    margin-top: 10px
+}
+
+footer .caixa-logo,footer .caixa-botoes {
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 15px
+}
+
+footer .caixa-contatos,footer .caixa-botoes {
+    margin-top: 10px;
+    
+}
+
+footer .caixa-logo img {
+    max-height: 100%;
+    max-width: 100%
+}
+
+footer .caixa-botoes ul {
+    list-style-type: none;
+    margin: 0 -5px;
+    padding: 0
+}
+
+footer .caixa-botoes ul>li {
+    padding: 0 5px;
+    margin-bottom: 10px;
+    overflow-wrap: break-word
+}
+
+footer .caixa-botoes ul>li>a {
+    display: block;
+    padding: 8px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,.09);
+    color: #fff
+}
+
+footer .caixa-botoes ul>li>a:hover {
+    background-color: rgba(255,255,255,.06);
+    border-color: rgba(255,255,255,.08)
+}
+
+footer .caixa-botoes ul>li>a>i.fa {
+    font-size: 1.15em
+}
+
+footer .caixa-botoes ul>li>a>span {
+    display: inline-block;
+}
+
+footer .info-contato {
+    font-size: 18px;
+    display: block;
+    padding: 0;
+    margin-bottom: 15px;
+    
+}
+
+footer .info-contato .icone {
+    float: left;
+    width: 30px;
+    margin: 0 5px 0 0;
+    color: rgba(0,0,0,.12);
+    padding-top: 5px
+}
+
+footer .info-contato .texto {
+    display: inline-block;
+    margin-left: -15px;
+    padding: 5px 10px 7px;
+    width: calc(100% - 35px);
+    background-color: rgba(0,0,0,.09);
+    color: #fff;
+    border-radius: 5px;
+    font-size: 15px
+    
+}
+
+footer .info-contato .icone>i.fa {
+    font-size: 1.3em;
+    width: 1em;
+    line-height: 1em
+}
+
+footer .info-contato .texto>span {
+    display: inline-block;
+    font-size: 1em
+}
+
+footer .caixa-links {
+    background-color: rgba(0,0,0,.1);
+    padding-top: 15px;
+    padding-bottom: 40px
+}
+
+footer .caixa-links .submenu-titulo {
+    display: block;
+    overflow-wrap: break-word;
+    font-size: 18px;
+    margin-top: 25px;
+    margin-bottom: 16px;
+    color: #ffa402
+}
+
+footer .caixa-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0
+}
+
+footer .caixa-links ul>li>a {
+    display: inline-block;
+    max-width: 100%;
+    padding: 3px 0;
+    font-size: 15px;
+    overflow-wrap: break-word;
+    color: rgba(255,255,255,.85)
+}
+
+footer .caixa-links ul>li>a:hover {
+    color: #ffa402
+}
+
+footer .caixa-copyright {
+    margin: 20px;
+    background-color: rgba(0,0,0,.09);
+    color: rgba(255,255,255,.85);
+    padding-top: 25px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 15px
+}
+
+footer .caixa-copyright a {
+    display: inline-block;
+    margin-left: 5px;
+    padding-left: 4px;
+    padding-right: 4px;
+    color: rgba(255,255,255,.85);
+    transition: none
+}
+
+footer .caixa-copyright a>img {
+    opacity: .8
+}
+
+footer .caixa-copyright a:hover {
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 1px 2px 3px #0089ffc7
+}
+
+footer .caixa-copyright a:hover>img {
+    filter: drop-shadow(1px 2px 2px #0089ff);
+    opacity: 1
+}
+
+@media(min-width: 1200px) {
+    footer .caixa-logo {
+        width:50%;
+        padding-right: 20px
+    }
+
+    footer .caixa-botoes {
+        width: 50%
+    }
+}
+
+@media(min-width: 992px) and (max-width:1199px) {
+}
+
+@media(min-width: 768px) and (max-width:991px) {
+    footer .caixa-logo {
+        width:40%;
+        padding-right: 20px
+    }
+
+    footer .caixa-botoes {
+        width: 60%
+    }
+}
+
+@media(min-width: 576px) and (max-width:767px) {
+    footer .caixa-logo {
+        width:60%;
+        padding-right: 20px
+    }
+
+    footer .caixa-botoes {
+        width: 60%
+    }
+}
+
+@media(max-width: 575px) {
+    footer .caixa-logo {
+        text-align:center;
+        width: 100%
+    }
+
+    footer .caixa-botoes {
+        width: 100%
+    }
+
+    footer .caixa-botoes ul>li>a {
+        font-size: 12px;
+        text-align: center;
+        padding: 3px;
+    }
+
+    footer .caixa-botoes ul>li>a>span {
+        display: inline-flex
+    }
+}

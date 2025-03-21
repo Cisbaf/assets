@@ -1,0 +1,321 @@
+:root {
+
+--input-color: #99A3BA;
+--input-border: #CDD9ED;
+--input-background: #fff;
+--input-placeholder: #CBD1DC;
+
+--input-border-focus: #275EFE;
+
+--group-color: var(--input-color);
+--group-border: var(--input-border);
+--group-background: #EEF4FF;
+
+--group-color-focus: #fff;
+--group-border-focus: var(--input-border-focus);
+--group-background-focus: #678EFE;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form-field {
+display: block;
+width: 100%;
+padding: 8px 16px;
+line-height: 25px;
+font-size: 14px;
+font-weight: 500;
+font-family: inherit;
+border-radius: 6px;
+-webkit-appearance: none;
+color: var(--input-color);
+border: 1px solid var(--input-border);
+background: var(--input-background);
+transition: border .3s ease;
+&::placeholder {
+    color: var(--input-placeholder);
+}
+&:focus {
+    outline: none;
+    border-color: var(--input-border-focus);
+}
+}
+
+.form-group {
+position: relative;
+display: flex;
+width: 100%;
+& > span,
+.form-field {
+    white-space: nowrap;
+    display: block;
+    &:not(:first-child):not(:last-child) {
+        border-radius: 0;
+    }
+    &:first-child {
+        border-radius: 6px 0 0 6px;
+    }
+    &:last-child {
+        border-radius: 0 6px 6px 0;
+    }
+    &:not(:first-child) {
+        margin-left: -1px;
+    }
+}
+.form-field {
+    position: relative;
+    z-index: 1;
+    flex: 1 1 auto;
+    width: 1%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+& > span {
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 25px;
+    color: var(--group-color);
+    background: var(--group-background);
+    border: 1px solid var(--group-border);
+    transition: background .3s ease, border .3s ease, color .3s ease;
+}
+&:focus-within {
+    & > span {
+        color: var(--group-color-focus);
+        background: var(--group-background-focus);
+        border-color: var(--group-border-focus);
+    }
+}
+}
+
+
+aside {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh;
+background-color: #f2f2f2;
+}
+
+form {
+overflow: hidden;
+position: relative;
+width: 30%;
+background-color: white;
+padding: 40px;
+border-radius: 6px;
+}
+
+input {
+color: #fff;
+font-size: 28px;
+width: 100%;
+padding: 20px 5px 5px;
+background-color: #4f4f4f;
+border: none;
+border-radius: 4px;
+}
+
+label {
+color: #fff;
+position: absolute;
+left: 0;
+bottom: 0;
+width: 100%;
+height: 100%;
+pointer-events: none;
+border-bottom: 1px solid #ffffff;
+}
+
+span {
+position: absolute;
+bottom: 5px;
+left: 5px;
+font-size: 28px;
+transition: all 0.3s ease;
+}
+
+label::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: -1px;
+width: 100%;
+height: 100%;
+border-bottom: 3px solid #e0138c;
+transform: translateX(-100%);
+transition: all 0.3s ease;
+}
+
+input:focus + label span,
+input:valid + label span {
+transform: translateY(-150%);
+font-size: 14px;
+bottom: 10px;
+color: #e0138c;
+}
+
+input:focus + label::after,
+input:valid + label::after {
+transform: translateX(0%);
+}
+.button-login{
+background:#1AAB8A;
+color:#fff;
+border:none;
+position:relative;
+height:60px;
+font-size:1.6em;
+padding:0 2em;
+cursor:pointer;
+transition:800ms ease all;
+outline:none;
+width: 100%;
+}
+.button-login:hover{
+background:#fff;
+color:#829e98;
+}
+.button-login:before,button:after{
+content:'';
+position:absolute;
+top:0;
+right:0;
+height:2px;
+width:0;
+background: #1AAB8A;
+transition:400ms ease all;
+}
+.button-login:after{
+right:inherit;
+top:inherit;
+left:0;
+bottom:0;
+}
+.button-login:hover:before,button:hover:after{
+width:100%;
+transition:800ms ease all;
+}
+/* Relatório Principal */
+
+    .relatorio-container {
+        background-color: #f0f0f0; /* Cinza claro */
+        padding: 20px;
+        border-radius: 8px; /* Borda arredondada */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        max-width: 600px;
+        margin: 20px auto; /* Centralizar o retângulo */
+        text-align: center; /* Centralizar o conteúdo */
+    }
+
+    .relatorio-container h2 {
+        color: #333;
+        margin-bottom: 15px;
+    }
+
+    .relatorio-container button {
+        margin: 5px;
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .relatorio-container button:hover {
+        background-color: #555;
+    }
+
+nav{
+    background-color: #333;
+}
+
+nav li{
+    display: inline-block;
+}
+
+nav li button{
+    display: inline-block;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+}
+
+nav li button:hover{
+    background-color: rgb(145, 22, 22);
+}
+
+nav li button:disabled{
+    background-color: rgb(218, 218, 218);
+}
+
+
+.dropdown-menu{
+    position: absolute;
+    box-shadow: 0 0 2px black;
+    display: none;
+    background-color: rgb(95, 95, 95);
+}
+
+.dropdown-menu a{
+    display: block;
+    color: black;
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+/* Estilo para a mensagem */
+.message {
+    color: #721c24; /* Vermelho do Bootstrap */
+    background-color: #f8d7da; /* Fundo de erro */
+    border: 1px solid #f5c6cb; /* Borda do Bootstrap */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 5px; /* Cantos arredondados */
+    font-size: 1.25rem; /* Tamanho do texto */
+    margin: 10px 0; /* Espaço em volta da mensagem */
+    text-align: center; /* Centralizar o texto */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+    opacity: 0; /* Inicialmente invisível */
+    transform: translateY(-20px); /* Posição inicial */
+    animation: floatInOut 5s ease-in-out forwards; /* Animação para aparecer e desaparecer */
+}
+
+
+
+@media (max-width: 800px) {
+    form {
+        width: 90%;
+    }
+}
+/* Animação de flutuação (aparecer e desaparecer com leve movimento) */
+@keyframes floatInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px); /* Começa acima da posição */
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(0); /* Chega na posição central */
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-10px); /* Flutua ligeiramente para cima */
+    }
+    80% {
+        opacity: 1;
+        transform: translateY(10px); /* Flutua para baixo */
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px); /* Desaparece acima da posição */
+    }
+}
+
