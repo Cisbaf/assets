@@ -7,6 +7,10 @@ const { Ofuscar } = require("./transform.js");
 
 app.use(express.static(__dirname+'/src/assets'));
 
+app.get('/', (req, res)=>{
+    res.send("hello world!")
+})
+
 app.get("/duvidas-nep",(req,res)=>{
 res.sendFile(__dirname+"/src/assets/public/duvidas-nep/index.html");
 })
@@ -26,5 +30,7 @@ app.get("/relatorios", (req, res)=>{
     res.send(result);
 })
 
-app.listen("8002",()=>{})
+app.listen("8002",()=>{
+    console.log("Servidor iniciado > localhost:8002")
+})
 
