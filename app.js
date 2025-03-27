@@ -30,7 +30,6 @@ app.get("/relatorios", (req, res)=>{
     res.send(result);
 })
 
-app.listen("8002",()=>{
-    console.log("Servidor iniciado > localhost:8002")
+app.listen("8000",()=>{
+    console.log("Servidor inicializado!");
 })
-

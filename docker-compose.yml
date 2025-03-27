@@ -1,0 +1,8 @@
+
+services:
+  assets:
+    container_name: servidor-assets
+    build: .
+    restart: always
+    ports:
+      - "8004:8000"
