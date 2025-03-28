@@ -30,63 +30,67 @@
 
     <section id="dash">
         <section id="dash">
-            <nav>
-                <ul>
-                    <li class="dropdown">
-                        <button>Indicador de Estrutura</button>
-                        <div class="dropdown-menu">
-                            <button onclick="UpdateDashBoard('p_sbunr82lkd', true)">
-                                Disponibilidade de Viatura</button>
-                        </div>            
-                    </li>
-                    <li class="dropdown">
-                        <button>Indicadores de Processo</button>
-                        <div class="dropdown-menu">
-                            <button onclick="UpdateDashBoard('p_t3rrx82lkd')">
-                                Tipos de Chamadas</button>
-                            <button onclick="UpdateDashBoard('p_2pwdma3lkd')">
-                                Unidades Solicitantes - Vaga Zero</button>
-                            <button onclick="UpdateDashBoard('p_0vrhju27kd')">
-                                Classificação de Risco e Regulações</button>
-                            <button onclick="UpdateDashBoard('p_8r6fx38lkd')">
-                                Saídas de Viaturas</button>
-                            <button onclick="UpdateDashBoard('p_tjmb5c9lkd')">
-                                Envios em Conduta Médica</button>
-                            <button onclick="UpdateDashBoard('p_dy3d1i9lkd')">
-                                Tipos de Estabelecimento</button>
-                            <button onclick="UpdateDashBoard('p_lah16camkd')">
-                                Destino</button>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <button>Indicador de Resultado</button>
-                        <div class="dropdown-menu">
-                            <button onclick="UpdateDashBoard('p_cfgctz9lkd')">
-                                Tempo Resposta</button>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <button>Indicador de Morbidade</button>
-                        <div class="dropdown-menu">
-                            <button onclick="UpdateDashBoard('p_bvd8bebpkd')">
-                                Natureza das Urgências</button>
-			                <button onclick="UpdateDashBoard('p_mhxlhfjupd')">
-                                Envio por Natureza</button>
-                        </div>            
-                    </li>
-                    <li class="dropdown">
-                        <button>Indicadores Demográficos</button>
-                        <div class="dropdown-menu">
-                            <button onclick="UpdateDashBoard('p_8ssh41lqkd')">
-                                Segmento de Tempo - Chamado</button>
-                            <button onclick="UpdateDashBoard('p_fgtw1tirkd')">
-                                Segmento de Tempo - Envio</button>
-                            <button onclick="UpdateDashBoard('p_dphsrajrkd')">
-                                Sexo e Idade do Paciente</button>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
+                <nav >
+                    <div style="display: flex;">
+                    <ul style="flex: 1;">
+                        <li class="dropdown">
+                            <button>Indicador de Estrutura</button>
+                            <div class="dropdown-menu">
+                                <button onclick="UpdateDashBoard('p_sbunr82lkd', true)">
+                                    Disponibilidade de Viatura</button>
+                            </div>            
+                        </li>
+                        <li class="dropdown">
+                            <button>Indicadores de Processo</button>
+                            <div class="dropdown-menu">
+                                <button onclick="UpdateDashBoard('p_t3rrx82lkd')">
+                                    Tipos de Chamadas</button>
+                                <button onclick="UpdateDashBoard('p_2pwdma3lkd')">
+                                    Unidades Solicitantes - Vaga Zero</button>
+                                <button onclick="UpdateDashBoard('p_0vrhju27kd')">
+                                    Classificação de Risco e Regulações</button>
+                                <button onclick="UpdateDashBoard('p_8r6fx38lkd')">
+                                    Saídas de Viaturas</button>
+                                <button onclick="UpdateDashBoard('p_tjmb5c9lkd')">
+                                    Envios em Conduta Médica</button>
+                                <button onclick="UpdateDashBoard('p_dy3d1i9lkd')">
+                                    Tipos de Estabelecimento</button>
+                                <button onclick="UpdateDashBoard('p_lah16camkd')">
+                                    Destino</button>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <button>Indicador de Resultado</button>
+                            <div class="dropdown-menu">
+                                <button onclick="UpdateDashBoard('p_cfgctz9lkd')">
+                                    Tempo Resposta</button>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <button>Indicador de Morbidade</button>
+                            <div class="dropdown-menu">
+                                <button onclick="UpdateDashBoard('p_bvd8bebpkd')">
+                                    Natureza das Urgências</button>
+                                <button onclick="UpdateDashBoard('p_mhxlhfjupd')">
+                                    Envio por Natureza</button>
+                            </div>            
+                        </li>
+                        <li class="dropdown">
+                            <button>Indicadores Demográficos</button>
+                            <div class="dropdown-menu">
+                                <button onclick="UpdateDashBoard('p_8ssh41lqkd')">
+                                    Segmento de Tempo - Chamado</button>
+                                <button onclick="UpdateDashBoard('p_fgtw1tirkd')">
+                                    Segmento de Tempo - Envio</button>
+                                <button onclick="UpdateDashBoard('p_dphsrajrkd')">
+                                    Sexo e Idade do Paciente</button>
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="btnLogout" onclick="Logout();">SAIR</button>
+                </div>
+                </nav>
+   
         </section>
         
         <div style="display:flex;flex-direction: column;justify-content: center;">

@@ -26,12 +26,11 @@ const mudancas = {
     "NOVA IGUAÇU": "NOVA IGUAÇU - SEMUS",
 }
 
-
 function Login() {
     const input_login = document.getElementById("user").value;
     const input_pass = document.getElementById("pass").value;
 
-    try{
+    try {
         if (!input_login || !input_pass) {
             throw new Error("Digite a senha e o usuário!");
         }
@@ -45,21 +44,20 @@ function Login() {
         municipio = verific["search"];
         UpdateDashBoard("p_sbunr82lkd", true);
         show("dash");
-    }catch (e) {
+    } catch (e) {
         showError(e.message);
     }
-
 }
 
 function UpdateDashBoard(page, mudar) {
     var url;
     if (mudar) {
-        const _municipio_ = mudancas[municipio]? mudancas[municipio] : municipio
+        const _municipio_ = mudancas[municipio] ? mudancas[municipio] : municipio;
         url = `https://lookerstudio.google.com/embed/reporting/bee3dcaf-bd6e-41a0-ab2f-79f921aacc2a/page/${page}?params=${encodeURIComponent(
             JSON.stringify({
                 "ds400._cidade": _municipio_
             })
-        )}`
+        )}`;
     } else {
         url = `https://lookerstudio.google.com/embed/reporting/bee3dcaf-bd6e-41a0-ab2f-79f921aacc2a/page/${page}?params=${encodeURIComponent(
             JSON.stringify({
@@ -67,35 +65,60 @@ function UpdateDashBoard(page, mudar) {
                 "ds371._cidade": municipio,
                 "ds385._cidade": municipio
             })
-        )}`
+        )}`;
     }
 
     const iframe = document.getElementById("lookerIframe");
-    iframe.src  = url;
+    iframe.src = url;
 
+    // Salvar sessão no localStorage
+    if (municipio) {
+        const sessionData = {
+            municipio: municipio,
+            currentPage: page,
+            mudar: mudar
+        };
+        localStorage.setItem('userSession', JSON.stringify(sessionData));
+    }
 }
 
 function showError(content) {
     const messages = document.getElementById("messages");
     const message = document.createElement("h1");
-    message.classList.add("message"); // Adiciona a classe CSS
+    message.classList.add("message");
     message.innerText = content;
     messages.appendChild(message);
 
-    // Remove a mensagem após 5 segundos (duração da animação)
     setTimeout(() => {
         messages.removeChild(message);
     }, 5000);
 }
 
 function show(id) {
-    for(let section of sections) {
-        if (section.id == id) {
-            section.style.display = "";
-        } else {
-            section.style.display = "none";
-        }
+    for (let section of sections) {
+        section.style.display = section.id === id ? "" : "none";
     }
 }
 
-show("login");
+function Logout() {
+    localStorage.removeItem('userSession');
+    municipio = "";
+    show("login");
+}
+
+// Verificar sessão ao carregar a página
+const savedSession = localStorage.getItem('userSession');
+if (savedSession) {
+    try {
+        const sessionData = JSON.parse(savedSession);
+        municipio = sessionData.municipio;
+        show("dash");
+        UpdateDashBoard(sessionData.currentPage, sessionData.mudar);
+    } catch (e) {
+        console.error('Erro ao restaurar a sessão:', e);
+        localStorage.removeItem('userSession');
+        show("login");
+    }
+} else {
+    show("login");
+}
