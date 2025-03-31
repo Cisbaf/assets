@@ -30,6 +30,6 @@ app.get("/relatorios", (req, res)=>{
     res.send(result);
 })
 
-app.listen("8001",()=>{
+app.listen("8000",()=>{
     console.log("Servidor inicializado!");
 })
