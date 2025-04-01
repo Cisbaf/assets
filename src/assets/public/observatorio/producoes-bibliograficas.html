@@ -20,26 +20,68 @@
 <body>
     <div class="back-to-top"></div>
     <header>
-        <div class="topbar p-0">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-8 text-sm">
-                        <div class="site-info">
-                            <a href="/" class="post-thumb">
-                                <img src="./assets/img/logoNav.jpg" style="width: 170px; height: 55px; margin-top: 2px;" alt="">
-                            </a>
+        <div class="topbar p-0 w-100">
+
+            <div class="menuCompleto">
+                <div class="w-100 p-0 m-0 d-flex justify-content-center">
+                    <div class="row md-5" style="margin-right:40px">
+                        <div class="col-sm-8 text-sm d-flex">
+                            <div class="site-info">
+                                <a href="/" class="post-thumb">
+                                    <img src="./assets/img/logoNav.jpg"
+                                        style="width: 170px; height: 55px; margin-top: 2px;" alt="">
+                                </a>
+                            </div>
                         </div>
+                    </div>
+                    <div>
+                        <ul class="nav justify-content-center mt-2">
+                            <li class="nav-item">
+                                <a class="nav-link active text-body" id="navTT"
+                                    href="https://observatorio.cisbaf.org.br/public/observatorio/projeto.html">Projeto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-body" id="navTT"
+                                    href="https://observatorio.cisbaf.org.br/public/observatorio/boletins.html">Boletins</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-body" id="navTT"
+                                    href="https://observatorio.cisbaf.org.br/public/observatorio/producoes-bibliograficas.html">Produção
+                                    Bibliográfica</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-body" id="navTT"
+                                    href="https://observatorio.cisbaf.org.br/public/observatorio/equipe.html">Equipe</a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown"
+                                    onmouseout="javascript:document.getElementById('dropAcessoRestrito').style.display = 'none'"
+                                    onmouseover="javascript:document.getElementById('dropAcessoRestrito').style.display = 'block'">
+                                    <a id="navTT" class="nav-link text-body" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false" href="https://indicadoressamu.cisbaf.org.br/">Acesso
+                                        restrito</a>
+                                    <div class="dropdown-menu show" aria-labelledby="dropdownMenuButton"
+                                        id="dropAcessoRestrito" x-placement="bottom-start"
+                                        style="display: none; position: absolute; transform: translate3d(0px, 40px, 0px); top: -10px; left: 0px; will-change: transform;">
+                                        <a class="dropdown-item" href="http://indicadoresamu.cisbaf.org.br">Indicadores
+                                            Samu</a>
+                                        <a class="dropdown-item" href="http://indicadores.cisbaf.org.br">Indicadores
+                                            Cisbaf</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <div class="page-hero bg-image overlay-dark" style="background-image: url(/public/observatorio/assets/img/banner_novo.jpg);"></div>
+    <!-- <div class="page-hero bg-image overlay-dark" style="background-image: url(/public/observatorio/assets/img/banner_novo.jpg);"></div>
      <div class="page-section bg-light">
     <div id="cardsbody" class="container">
 
     </div>
-  </div>
+  </div> -->
     <div class="page-section" style="background-color: #1a81c7;">
         <div class="container p-4">
             <h3 class="text-center" style="color: rgb(234, 237, 58);">
