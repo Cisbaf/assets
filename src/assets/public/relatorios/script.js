@@ -49,24 +49,17 @@ function Login() {
     }
 }
 
-function UpdateDashBoard(page, mudar) {
+function UpdateDashBoard(page) {
     var url;
-    if (mudar) {
-        const _municipio_ = mudancas[municipio] ? mudancas[municipio] : municipio;
-        url = `https://lookerstudio.google.com/embed/reporting/bee3dcaf-bd6e-41a0-ab2f-79f921aacc2a/page/${page}?params=${encodeURIComponent(
-            JSON.stringify({
-                "ds400._cidade": _municipio_
-            })
-        )}`;
-    } else {
-        url = `https://lookerstudio.google.com/embed/reporting/bee3dcaf-bd6e-41a0-ab2f-79f921aacc2a/page/${page}?params=${encodeURIComponent(
-            JSON.stringify({
-                "ds298._cidade": municipio,
-                "ds371._cidade": municipio,
-                "ds385._cidade": municipio
-            })
-        )}`;
-    }
+    const _municipio_ = mudancas[municipio] ? mudancas[municipio] : municipio;
+    url = `https://lookerstudio.google.com/embed/reporting/bee3dcaf-bd6e-41a0-ab2f-79f921aacc2a/page/${page}?params=${encodeURIComponent(
+        JSON.stringify({
+            "ds400._cidade": _municipio_,
+            "ds298._cidade": municipio,
+            "ds371._cidade": municipio,
+            "ds385._cidade": municipio
+        })
+    )}`;
 
     const iframe = document.getElementById("lookerIframe");
     iframe.src = url;
@@ -76,7 +69,6 @@ function UpdateDashBoard(page, mudar) {
         const sessionData = {
             municipio: municipio,
             currentPage: page,
-            mudar: mudar
         };
         localStorage.setItem('userSession', JSON.stringify(sessionData));
     }
