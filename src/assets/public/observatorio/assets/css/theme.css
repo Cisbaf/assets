@@ -1929,7 +1929,7 @@ a.text-dark:focus {
   border-radius: 40px 0 0 40px;
 }
 
-.card-video {
+.card-photo {
   display: block;
   margin: 15px auto;
   width: 360px;
@@ -1940,18 +1940,34 @@ a.text-dark:focus {
   overflow: hidden;
 }
 
-.card-video .header {
+.card-photo .text-xl {
+  font-weight: 500;
+}
+
+.card-photo .header {
   position: relative;
   width: 360px;
   height: 315px;
   overflow: hidden;
 }
 
+.card-photo .header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(52, 53, 49, 0.36);
+  opacity: 0;
+  transition: opacity .2s linear;
+}
 
+.card-photo:hover .header::before {
+  opacity: 1;
+}
 
-
-
-.card-video .header .meta {
+.card-photo .header .meta {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1963,13 +1979,13 @@ a.text-dark:focus {
   transition: all .2s ease;
 }
 
-.card-video:hover .header .meta {
+.card-photo:hover .header .meta {
   bottom: 15px;
   visibility: visible;
   opacity: 1;
 }
 
-.card-video .header .meta a {
+.card-photo .header .meta a {
   display: inline-block;
   margin: 3px;
   width: 40px;
@@ -1983,13 +1999,12 @@ a.text-dark:focus {
   transition: all .2s ease;
 }
 
-.card-video .body {
-  padding: 15px 20px;
+.card-photo .header .meta a:hover {
+  text-decoration: none;
+  background-color: #6E807A;
+  color: #fff;
 }
 
-.card-video .body .text-sm {
-  font-size: 0.875rem;
-  /* Equivalente a text-sm do Tailwind */
-  color: #718096;
-  /* Um tom de cinza */
+.card-photo .body {
+  padding: 15px 20px;
 }
