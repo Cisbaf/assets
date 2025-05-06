@@ -1,6 +1,26 @@
 
 $('document').ready(function() {
-  $('#doctorSlideshow').owlCarousel({
+  $('#publicacoesSlideshow').owlCarousel({
+    nav: true,
+    dots: false,
+    navText: ["<span class='mai-arrow-back'></span>", "<span class='mai-arrow-forward'></span>"],
+    responsive: {
+      0: {
+        items: 1
+      },
+      576: {
+        items: 2
+      },
+      992: {
+        items: 3
+      }
+    }
+  });
+});
+
+
+$('document').ready(function() {
+  $('#mostraEstadualSlideshow').owlCarousel({
     nav: true,
     dots: false,
     navText: ["<span class='mai-arrow-back'></span>", "<span class='mai-arrow-forward'></span>"],
@@ -19,6 +39,45 @@ $('document').ready(function() {
 });
 
 $('document').ready(function() {
+  $('#seminariosSlideshow').owlCarousel({
+    nav: true,
+    dots: false,
+    navText: ["<span class='mai-arrow-back'></span>", "<span class='mai-arrow-forward'></span>"],
+    responsive: {
+      0: {
+        items: 1
+      },
+      576: {
+        items: 2
+      },
+      992: {
+        items: 3
+      }
+    }
+  });
+});
+
+$('document').ready(function() {
+  $('#seminariosSlideshow').owlCarousel({
+    nav: true,
+    dots: false,
+    navText: ["<span class='mai-arrow-back'></span>", "<span class='mai-arrow-forward'></span>"],
+    responsive: {
+      0: {
+        items: 1
+      },
+      576: {
+        items: 2
+      },
+      992: {
+        items: 3
+      }
+    }
+  });
+});
+
+
+$('document').ready(function() {
   $("a[data-role='smoothscroll']").click(function(e) {
     e.preventDefault();
     
@@ -30,6 +89,7 @@ $('document').ready(function() {
     return false;
   });
 });
+
 
 $('document').ready(function() {
   // Back to top

@@ -1,301 +1,368 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Cisbaf | Produções Bibliográficas</title>
-    <link rel="stylesheet" href="/public/observatorio/assets/css/maicons.css" />
-    <link
-      rel="stylesheet"
-      href="/public/observatorio/assets/css/bootstrap.css"
-    />
-    <link
-      rel="stylesheet"
-      href="/public/observatorio/assets/vendor/owl-carousel/css/owl.carousel.css"
-    />
-    <link
-      rel="stylesheet"
-      href="/public/observatorio/assets/vendor/animate/animate.css"
-    />
-    <link rel="stylesheet" href="/public/observatorio/assets/css/theme.css" />
-    <link rel="stylesheet" href="/public/observatorio/assets/css/footer.css" />
-    <link rel="stylesheet" href="/public/observatorio/assets/css/footer2.css" />
-    <link
-      rel="icon"
-      href="/public/observatorio/assets/img/logo_2.png"
-      type="image/gif"
-    />
-    <script src="./menu-navegacao/menu-component.js"></script>
-    
-  </head>
 
-  <body>
-    <header>
-      <menu-navegacao></menu-navegacao>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Cisbaf | Produções Bibliográficas</title>
+  <link rel="stylesheet" href="/public/observatorio/assets/css/maicons.css" />
+  <link rel="stylesheet" href="/public/observatorio/assets/css/bootstrap.css" />
+  <link rel="stylesheet" href="/public/observatorio/assets/vendor/owl-carousel/css/owl.carousel.css" />
+  <link rel="stylesheet" href="/public/observatorio/assets/vendor/animate/animate.css" />
+  <link rel="stylesheet" href="/public/observatorio/assets/css/theme.css" />
+  <link rel="stylesheet" href="/public/observatorio/assets/css/footer.css" />
+  <link rel="stylesheet" href="/public/observatorio/assets/css/footer2.css" />
+  <link rel="icon" href="/public/observatorio/assets/img/logo_2.png" type="image/gif" />
+  <script src="./menu-navegacao/menu-component.js"></script>
+  <style>
+    .sidebar {
+      width: 80px;
+      background-color: #f8f9fa;
+      padding: 20px;
+    }
+
+    .content {
+      flex-grow: 1;
+      padding: 20px;
+    }
+
+    .nav-link {
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <menu-navegacao></menu-navegacao>
   </header>
-    <div class="back-to-top"></div>
-    
-    <!-- <div class="page-hero bg-image overlay-dark" style="background-image: url(/public/observatorio/assets/img/banner_novo.jpg);"></div>
-     <div class="page-section bg-light">
-    <div id="cardsbody" class="container">
+  <div class="back-to-top"></div>
 
-    </div>
-  </div> -->
-    <div class="page-section" style="background-color: #1a81c7">
-      <div class="container p-4">
-        <h3 class="text-center" style="color: rgb(234, 237, 58)">
-          Produções Bibliográficas
-        </h3>
+  <div class="container-fluid mt-4">
+    <div class="row">
+      <div class="col-md-2 sidebar">
+        <div class="nav flex-column nav-pills" id="v-tabs" role="tablist" aria-orientation="vertical">
+
+          <a class="nav-link active" id="publicacoes-tab" data-bs-toggle="pill" href="#publicacoes" role="tab"
+            aria-controls="publicacoes" aria-selected="true">Publicações em Revistas</a>
+
+          <a class="nav-link" id="mostra-tab" data-bs-toggle="pill" href="#mostra" role="tab" aria-controls="mostra"
+            aria-selected="false">Mostra Estadual de Práticas</a>
+
+          <a class="nav-link" id="seminarios-tab" data-bs-toggle="pill" href="#seminarios" role="tab"
+            aria-controls="seminarios" aria-selected="false">Apresentação em Congressos</a>
+        </div>
       </div>
-    </div>
+      <div class="col-md-9 content">
+        <div class="tab-content" id="v-tabs-content">
+          <div class="tab-pane fade show active" id="publicacoes" role="tabpanel" aria-labelledby="publicacoes-tab">
 
-    <div class="page-section">
-      <div class="container p-5">
-        <h5 class="text-left mb-3 wow fadeInUp">
-          ARTIGOS PUBLICADOS EM PERIÓDICOS
-        </h5>
-        <div class="owl-carousel wow fadeInUp" id="doctorSlideshow">
-          <div class="item">
-            <div class="card-doctor">
-              <div class="header align-content-center">
-                <img
-                  src="./assets/img/doctors/covid_19_monitoramento_de_sindcromes_respiratorias_obitos_domiciliares_Serviço_Atendimento_Movel_Urgencia-13.jpg"
-                  alt=""
-                />
-                <div class="meta">
-                  <center>
-                    <!-- <a href="./assets/pdfs/covid_19_monitoramento_de_sindcromes_respiratorias_obitos_domiciliares_Serviço_Atendimento_Movel_Urgencia.pdf" target="_blank"><span  class="mai-reader"></span></a> -->
-                    <a
-                      href="https://rsdjournal.org/index.php/rsd/article/view/8044"
-                      target="_blank"
-                      ><span class="mai-stats-chart"></span
-                    ></a>
-                  </center>
-                </div>
-              </div>
-              <div class="body">
-                <span class="text-sm text-grey"
-                  >COVID 19 MONITORAMENTO SAMU
-                </span>
-              </div>
-            </div>
-          </div>
+            <div class="page-section">
+              <div class="container p-5">
+                <h5 class="text-left mb-3 wow fadeInUp">
+                  Publicações em Revistas e Periódicos
+                </h5>
+                <div class="owl-carousel wow fadeInUp" id="publicacoesSlideshow">
 
-          <div class="item">
-            <div class="card-doctor">
-              <div class="header align-content-center">
-                <img src="./assets/img/doctors/distribuicao.jpg" alt="" />
-                <center>
-                  <div class="meta">
-                    <a
-                      href="https://seer.ufu.br/index.php/hygeia/article/view/68744"
-                      target="_blank"
-                      ><span class="mai-stats-chart"></span
-                    ></a>
+                  <div class="item">
+                    <div class="card-doctor">
+                      <div class="header align-content-center">
+                        <img
+                          src="./assets/img/doctors/covid_19_monitoramento_de_sindcromes_respiratorias_obitos_domiciliares_Serviço_Atendimento_Movel_Urgencia-13.jpg"
+                          alt="" />
+                        <div class="meta">
+                          <center>
+                            <a href="https://rsdjournal.org/index.php/rsd/article/view/8044" target="_blank"><span
+                                class="mai-stats-chart"></span></a>
+                          </center>
+                        </div>
+                      </div>
+                      <div class="body">
+                        <span class="text-sm text-grey">2020: COVID-19: monitoramento de síndromes respiratórias e
+                          óbitos
+                          domiciliares no Serviço de Atendimento Móvel de Urgência
+                        </span>
+                      </div>
+                    </div>
                   </div>
-                </center>
-              </div>
-              <div class="body">
-                <span class="text-sm text-grey"
-                  >DISTRIBUIÇÃO ESPACIAL MUNICÍPIO RJ</span
-                >
+
+                  <div class="item">
+                    <div class="card-doctor">
+                      <div class="header align-content-center">
+                        <img src="./assets/img/doctors/distribuicao.jpg" alt="" />
+                        <center>
+                          <div class="meta">
+                            <a href="https://seer.ufu.br/index.php/hygeia/article/view/68744" target="_blank"><span
+                                class="mai-stats-chart"></span></a>
+                          </div>
+                        </center>
+                      </div>
+                      <div class="body">
+                        <span class="text-sm text-grey">2024: DISTRIBUIÇÃO ESPACIAL E FATORES ASSOCIADOS À MORTALIDADE
+                          PREMATURA
+                          POR DOENÇAS DO APARELHO CARDIOVASCULAR NOS MUNICÍPIOS DO RIO DE JANEIRO (2011-2022)</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+          <div class="tab-pane fade" id="mostra" role="tabpanel" aria-labelledby="mostra-tab">
+            <div class="page-section">
+              <div class="container p-5">
+                <h5 class="text-left mb-3 wow fadeInUp">
+                  Mostra Estadual de Práticas de Saúde – CONSEMS RJ/IdeiaSUS-FIOCRUZ
+                </h5>
+                <div class="owl-carousel wow fadeInUp" id="mostraEstadualSlideshow">
 
-          <div class="item">
-            <div class="card-doctor">
-              <div class="header align-content-center">
-                <img
-                  src="./assets/img/doctors/E-poster_MOSTRA_COSEMS_CISBAF.jpg"
-                  alt=""
-                />
-                <div class="meta">
-                  <center>
-                    <a
-                      href="./assets/pdfs/E-poster_MOSTRA_COSEMS_CISBAF.pdf"
-                      target="_blank"
-                    >
-                      <span class="mai-reader"> </span>
-                    </a>
-                  </center>
+
+                  <div class="item">
+                    <div class="card-doctor">
+                      <div class="header align-content-center">
+                        <img src="./assets/img/doctors/E-poster_MOSTRA_COSEMS_CISBAF.jpg" alt="" />
+                        <div class="meta">
+                          <center>
+                            <a href="./assets/pdfs/E-poster_MOSTRA_COSEMS_CISBAF.pdf" target="_blank">
+                              <span class="mai-reader"> </span>
+                            </a>
+                          </center>
+                        </div>
+                      </div>
+                      <div class="body">
+                        <span class="text-sm text-grey">2023 - A EXPERIÊNCIA DO CISBAF NO PROCESSO DE QUALIFICAÇÃO DOS
+                          TRABALHADORES NA BAIXADA FLUMINENSE </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <div class="card-doctor">
+                      <div class="header align-content-center">
+                        <img src="https://observatorio.cisbaf.org.br/api/livreto/page/formacao-no-samu/0/50" alt="" />
+                        <div class="meta">
+                          <center>
+                            <a href="https://observatorio.cisbaf.org.br/api/livreto/pdf/formacao-no-samu"
+                              target="_blank">
+                              <span class="mai-reader"></span>
+                            </a>
+                          </center>
+                        </div>
+                      </div>
+                      <div class="body">
+                        <span class="text-sm text-grey">2024 - FORMAÇÃO NO SAMU DE QUEIMADOS: FORTALECENDO A EQUIPE E
+                          AMPLIANDO A CAPACIDADE DE RESPOSTA</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="card-doctor">
+                      <div class="header align-content-center">
+                        <img
+                          src="https://observatorio.cisbaf.org.br/api/livreto/page/5a-mostra-programa-mais-acesso/0/50"
+                          alt="" />
+                        <div class="meta">
+                          <center>
+                            <a href="https://observatorio.cisbaf.org.br/api/livreto/pdf/5a-mostra-programa-mais-acesso"
+                              target="_blank">
+                              <span class="mai-reader"></span>
+                            </a>
+                          </center>
+                        </div>
+                      </div>
+                      <div class="body">
+                        <span class="text-sm text-grey">2025 - 5ª Mostra PROGRAMA MAIS ACESSO A ESPECIALISTAS E O
+                          FORTALECIMENTO DA REGIONALIZAÇÃO DO SUS</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="body">
-                <span class="text-sm text-grey"
-                  >3º AMOSTRA ESTADUAL DE PRÁTICAS DE SAÚDE</span
-                >
               </div>
             </div>
           </div>
+          <div class="tab-pane fade" id="seminarios" role="tabpanel" aria-labelledby="seminarios-tab">
+            <div class="page-section">
+              <div class="container p-5">
+                <h5 class="text-left mb-3 wow fadeInUp">
+                  Apresentação em Congressos e Seminários
+                </h5>
+                <div class="owl-carousel wow fadeInUp" id="seminariosSlideshow">
 
-          <div class="item">
-            <div class="card-doctor">
-              <div class="header align-content-center">
-                <img
-                  src="./assets/img/doctors/E-poster_SOCERJ_CISBAF.jpg"
-                  alt=""
-                />
-                <div class="meta">
-                  <center>
-                    <a
-                      href="./assets/pdfs/E-poster_SOCERJ_CISBAF.pdf"
-                      target="_blank"
-                    >
-                      <span class="mai-reader"></span>
-                    </a>
-                  </center>
+                  <div class="item">
+                    <div class="card-doctor">
+                      <div class="header align-content-center">
+                        <img src="./assets/img/doctors/E-poster_SOCERJ_CISBAF.jpg" alt="" />
+                        <div class="meta">
+                          <center>
+                            <a href="./assets/pdfs/E-poster_SOCERJ_CISBAF.pdf" target="_blank">
+                              <span class="mai-reader"></span>
+                            </a>
+                          </center>
+                        </div>
+                      </div>
+                      <div class="body">
+                        <span class="text-sm text-grey">2023 - 40° CONGRESSO SOCERJ 2023</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="card-doctor">
+                      <div class="header align-content-center">
+                        <img
+                          src="https://observatorio.cisbaf.org.br/api/livreto/page/formacao-no-samu-de-queimados/0/50"
+                          alt="" />
+                        <div class="meta">
+                          <center>
+                            <a href="https://observatorio.cisbaf.org.br/api/livreto/pdf/formacao-no-samu-de-queimados"
+                              target="_blank">
+                              <span class="mai-reader"></span>
+                            </a>
+                          </center>
+                        </div>
+                      </div>
+                      <div class="body">
+                        <span class="text-sm text-grey">2024 - 16º Congresso Internacional Rede Unida –
+                          FORMAÇÃO NO SAMU DE QUEIMADOS: FORTALECENDO A EQUIPE E AMPLIANDO A CAPACIDADE DE RESPOSTA
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="card-doctor">
+                      <div class="header align-content-center">
+                        <img src="https://observatorio.cisbaf.org.br/api/livreto/page/fortalecendo-a-gestao/0/50"
+                          alt="" />
+                        <div class="meta">
+                          <center>
+                            <a href="https://observatorio.cisbaf.org.br/api/livreto/pdf/fortalecendo-a-gestao"
+                              target="_blank">
+                              <span class="mai-reader"></span>
+                            </a>
+                          </center>
+                        </div>
+                      </div>
+                      <div class="body">
+                        <span class="text-sm text-grey">2025 - Seminário Nacional de Consórcios Públicos e
+                          Regionalização do SUS, organizado pelo Observatório do SUS e pela ENSP/Fiocruz
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+
                 </div>
-              </div>
-              <div class="body">
-                <span class="text-sm text-grey">40° CONGRESSO SOCERJ 2023</span>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <footer>
-      <div class="caixa-principal container">
-        <div class="row">
-          <div class="col-12 col-lg-4 col-xl-6">
-            <div class="caixa-logo">
-              <img src="/public/observatorio/assets/img/logoRodape2.png" />
-              <div class="footer-barra02">
-                <div class="footer-sosmed mt-3 m-3">
-                  <a
-                    href="https://www.youtube.com/@cisbafoficial8563"
-                    target="_blank"
-                    ><span class="mai-logo-youtube"></span
-                  ></a>
-                  <a href="https://www.facebook.com/cisbaf" target="_blank"
-                    ><span class="mai-logo-facebook-f"></span
-                  ></a>
-                  <a href="https://www.instagram.com/cisbaf/" target="_blank"
-                    ><span class="mai-logo-instagram"></span
-                  ></a>
-                  <!-- <a href="#" target="_blank"><span class="mai-logo-linkedin"></span></a>
-                                <a href="#" target="_blank"><span class="mai-logo-whatsapp"></span></a> -->
-                </div>
+  <footer>
+    <div class="caixa-principal container">
+      <div class="row">
+        <div class="col-12 col-lg-4 col-xl-6">
+          <div class="caixa-logo">
+            <img src="/public/observatorio/assets/img/logoRodape2.png" />
+            <div class="footer-barra02">
+              <div class="footer-sosmed mt-3 m-3">
+                <a href="https://www.youtube.com/@cisbafoficial8563" target="_blank"><span
+                    class="mai-logo-youtube"></span></a>
+                <a href="https://www.facebook.com/cisbaf" target="_blank"><span class="mai-logo-facebook-f"></span></a>
+                <a href="https://www.instagram.com/cisbaf/" target="_blank"><span class="mai-logo-instagram"></span></a>
               </div>
-            </div>
-
-            <div class="caixa-botoes">
-              <ul class="row">
-                <li class="col-3 col-sm-6 col-md-6 col-lg-6 col-xl-12">
-                  <a
-                    href="https://www.cisbaf.org.br/contato/"
-                    target="_blank"
-                    class="link-btn"
-                  >
-                    <span>Contato</span>
-                  </a>
-                </li>
-                <li class="col-3 col-sm-6 col-md-6 col-lg-6 col-xl-12">
-                  <a
-                    href="https://www.cisbaf.org.br/localizacao"
-                    target="_blank"
-                    class="link-btn"
-                  >
-                    <span>Localização</span>
-                  </a>
-                </li>
-                <li class="col-3 col-sm-6 col-md-6 col-lg-6 col-xl-12">
-                  <a
-                    href="https://www.cisbaf.org.br/faq"
-                    target="_blank"
-                    class="link-btn"
-                  >
-                    <span>Dúvidas</span>
-                  </a>
-                </li>
-
-                <li class="col-3 col-sm-6 col-md-6 col-lg-6 col-xl-12">
-                  <a
-                    href="https://webmail.skymail.net.br/?url=https://webapp.skymail.net.br/owa/&amp;reason=0#path=/mail/inbox"
-                    target="_blank"
-                    class="link-btn"
-                  >
-                    <span>Webmail</span>
-                  </a>
-                </li>
-              </ul>
             </div>
           </div>
 
-          <div class="caixa-contatos col-12 col-lg-8 col-xl-6">
-            <div class="info-contato endereco">
-              <div class="icone">
-                <i class="fa fa-fw fa-map" aria-hidden="true"></i>
-              </div>
-              <div class="texto">
-                Endereço:
-                <span>Av. Governador Roberto da Silveira</span>
-                <span>2.012</span>
-                <span> - Posse</span>
-                <br />
-                <span>CEP&nbsp;26020-740</span>
-                <br />
-                <span>Nova Iguaçu - RJ</span>
-              </div>
-            </div>
+          <div class="caixa-botoes">
+            <ul class="row">
+              <li class="col-3 col-sm-6 col-md-6 col-lg-6 col-xl-12">
+                <a href="https://www.cisbaf.org.br/contato/" target="_blank" class="link-btn">
+                  <span>Contato</span>
+                </a>
+              </li>
+              <li class="col-3 col-sm-6 col-md-6 col-lg-6 col-xl-12">
+                <a href="https://www.cisbaf.org.br/localizacao" target="_blank" class="link-btn">
+                  <span>Localização</span>
+                </a>
+              </li>
+              <li class="col-3 col-sm-6 col-md-6 col-lg-6 col-xl-12">
+                <a href="https://www.cisbaf.org.br/faq" target="_blank" class="link-btn">
+                  <span>Dúvidas</span>
+                </a>
+              </li>
 
-            <div class="info-contato telefone">
-              <div class="icone">
-                <i class="fa fa-fw fa-phone" aria-hidden="true"></i>
-              </div>
-              <div class="texto">
-                Telefone: <span>(21) 3102-0460 / 3102-1067 </span>
-              </div>
-            </div>
+              <li class="col-3 col-sm-6 col-md-6 col-lg-6 col-xl-12">
+                <a href="https://webmail.skymail.net.br/?url=https://webapp.skymail.net.br/owa/&reason=0#path=/mail/inbox"
+                  target="_blank" class="link-btn">
+                  <span>Webmail</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-            <div class="info-contato telefone">
-              <div class="icone">
-                <i class="fa fa-fw fa-envelope" aria-hidden="true"></i>
-              </div>
-              <div class="texto">Email: <span>cisbaf@cisbaf.org.br</span></div>
+        <div class="caixa-contatos col-12 col-lg-8 col-xl-6">
+          <div class="info-contato endereco">
+            <div class="icone">
+              <i class="fa fa-fw fa-map" aria-hidden="true"></i>
             </div>
+            <div class="texto">
+              Endereço:
+              <span>Av. Governador Roberto da Silveira</span>
+              <span>2.012</span>
+              <span> - Posse</span>
+              <br />
+              <span>CEP&nbsp;26020-740</span>
+              <br />
+              <span>Nova Iguaçu - RJ</span>
+            </div>
+          </div>
+
+          <div class="info-contato telefone">
+            <div class="icone">
+              <i class="fa fa-fw fa-phone" aria-hidden="true"></i>
+            </div>
+            <div class="texto">Telefone: <span>(21) 3102-0460 / 3102-1067 </span></div>
+          </div>
+
+          <div class="info-contato telefone">
+            <div class="icone">
+              <i class="fa fa-fw fa-envelope" aria-hidden="true"></i>
+            </div>
+            <div class="texto">Email: <span>cisbaf@cisbaf.org.br</span></div>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="row caixa-copyright">
-        <div class="col-12">
-          <span>2023</span>
-          <span> © </span>
-          <span
-            >CISBAF - Consórcio Intermunicipal de Saúde da Baixada
-            Fluminense</span
-          >
-          <span> • </span>
-          <a href="/" target="_blank" title="CISBAF TI">
-            <span
-              >Desenvolvido por: TI - Setor de Desenvolvimento - CISBAF</span
-            >
-            <img
-              src="/public/observatorio/assets/img/logo_2.png"
-              style="height: 20px"
-              class="img-fluid"
-            />
-          </a>
-        </div>
+    <div class="row caixa-copyright">
+      <div class="col-12">
+        <span>2023</span>
+        <span> © </span>
+        <span>CISBAF - Consórcio Intermunicipal de Saúde da Baixada
+          Fluminense</span>
+        <span> • </span>
+        <a href="/" target="_blank" title="CISBAF TI">
+          <span>Desenvolvido por: TI - Setor de Desenvolvimento - CISBAF</span>
+          <img src="/public/observatorio/assets/img/logo_2.png" style="height: 20px" class="img-fluid" />
+        </a>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <script src="/public/observatorio/assets/js/jquery-3.5.1.min.js"></script>
-    <script src="/public/observatorio/assets/js/bootstrap.bundle.min.js"></script>
-    <script src="/public/observatorio/assets/vendor/owl-carousel/js/owl.carousel.min.js"></script>
-    <script src="/public/observatorio/assets/vendor/wow/wow.min.js"></script>
-    <script src="/public/observatorio/assets/js/theme.js"></script>
-    <script>
-      $(document).ready(function () {
-        $("#cardsbody").load("cards.html");
-      });
-    </script>
-  </body>
+  <script src="/public/observatorio/assets/js/jquery-3.5.1.min.js"></script>
+  <script src="/public/observatorio/assets/js/bootstrap.bundle.min.js"></script>
+  <script src="/public/observatorio/assets/vendor/owl-carousel/js/owl.carousel.min.js"></script>
+  <script src="/public/observatorio/assets/vendor/wow/wow.min.js"></script>
+  <script src="/public/observatorio/assets/js/theme.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#cardsbody").load("cards.html");
+    });
+  </script>
+</body>
+
 </html>
