@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="./assets/css/footer2.css" />
     <link rel="icon" href="./assets/img/logo_2.jpgs" type="image/gif" />
     <script src="./menu-navegacao/menu-component.js"></script>
+    <script src="./card-edicoes/card-edicoes.js"></script>
+    <link rel="stylesheet" href="./card-edicoes/card-style.css" />
+
   </head>
 
   <body>
@@ -36,16 +39,11 @@
     <div class="page-section">
       <div class="container p-5">
         <h1 class="text-center mb-3 wow fadeInUp">Boletins - Edições</h1>
-        <div class="d-flex justify-content-center">
-          <div class="spinner-border" id="spinner" role="status">
-            <span class="sr-only">Loading...</span>
-          </div>
-        </div>
-        <div
-          class="owl-carousel wow fadeInUp"
-          id="doctorSlideshow"
-          style="display: none"
-        ></div>
+          <card-list
+            infos="https://livreto.cisbaf.org.br/infos/observatorio"
+            imgs="https://livreto.cisbaf.org.br/page/{{name}}/0/50"
+            pdf="https://livreto.cisbaf.org.br/pdf/{{name}}"
+            livreto="https://livreto.cisbaf.org.br/render/{{name}}" />
       </div>
     </div>
 
