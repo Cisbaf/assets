@@ -10,7 +10,7 @@ app.use(express.static(__dirname+'/src/assets'));
 app.use(require('cors')());
 
 app.get('/', (req, res)=>{
-    res.send("hello world!")
+    res.redirect("/relatorios");
 })
 
 app.get("/duvidas-nep",(req,res)=>{
