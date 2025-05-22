@@ -2,10 +2,12 @@ const express = require("express");
 const fs = require("fs");
 const path = require("path");
 const app = express();
+const cors = require('cors');
 
 const { Ofuscar } = require("./transform.js");
 
 app.use(express.static(__dirname+'/src/assets'));
+app.use(require('cors')());
 
 app.get('/', (req, res)=>{
     res.send("hello world!")
