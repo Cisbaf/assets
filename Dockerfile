@@ -1,4 +1,5 @@
-FROM node:latest
+# Use uma versão específica para evitar builds quebrados no futuro
+FROM node:20-alpine
 
 WORKDIR /app
 
