@@ -53,9 +53,8 @@ function makeUrl(page, params) {
 }
 
 function OtherParamsUpdateDashBoard(page) {
-    const _municipio_ = mudancas[municipio] ? mudancas[municipio] : municipio;
     const params = {
-        "ds024._cidade": _municipio_,
+        "ds024._cidade": municipio,
         "ds025._cidade": municipio,
         "ds531._cidade": municipio,
     };
