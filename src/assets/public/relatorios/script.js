@@ -1,4 +1,5 @@
 const sections = document.getElementsByTagName("section");
+const urlPrincipalLooker = "https://lookerstudio.google.com/embed/reporting/bee3dcaf-bd6e-41a0-ab2f-79f921aacc2a/page"
 var municipio = "";
 
 const acessos = {
@@ -26,6 +27,78 @@ const mudancas = {
     "NOVA IGUAÇU": "NOVA IGUAÇU - SEMUS",
 }
 
+async function updateSessionAndPage(municipio, page) {
+    return new Promise((resolve, reject)=>{
+       try {
+        if (!municipio || !page) reject();
+        const sessionData = {
+            municipio: municipio,
+            currentPage: page,
+        };
+        localStorage.setItem('userSession', JSON.stringify(sessionData));
+        resolve();
+       } catch {
+        reject();
+       }
+    })
+}
+
+function setUrlForIframe(url) {
+    const iframe = document.getElementById("lookerIframe");
+    iframe.src = url;
+}
+
+function makeUrl(page, params) {
+    return `${urlPrincipalLooker}/${page}?params=${encodeURIComponent(JSON.stringify(params))}`;
+}
+
+function OtherParamsUpdateDashBoard(page) {
+    const _municipio_ = mudancas[municipio] ? mudancas[municipio] : municipio;
+    const params = {
+        "ds024._cidade": _municipio_,
+        "ds025._cidade": municipio,
+        "ds531._cidade": municipio,
+    };
+    const url = makeUrl(page, params);
+    console.log(url);
+    setUrlForIframe(url);
+    // Salvar sessão e pagina atual no localStorage
+    updateSessionAndPage(municipio, page);
+}
+
+function UpdateDashBoard(page) {
+    const _municipio_ = mudancas[municipio] ? mudancas[municipio] : municipio;
+    const params = {
+        "ds400._cidade": _municipio_,
+        "ds298._cidade": municipio,
+        "ds371._cidade": municipio,
+        "ds385._cidade": municipio
+    };
+    const url = makeUrl(page, params);
+    setUrlForIframe(url);
+    // Salvar sessão e pagina atual no localStorage
+    updateSessionAndPage(municipio, page);
+}
+
+function showError(content) {
+    const messages = document.getElementById("messages");
+    const message = document.createElement("h1");
+    message.classList.add("message");
+    message.innerText = content;
+    messages.appendChild(message);
+
+    setTimeout(() => {
+        messages.removeChild(message);
+    }, 5000);
+}
+
+function show(id) {
+    for (let section of sections) {
+        section.style.display = section.id === id ? "" : "none";
+    }
+}
+
+
 function Login() {
     const input_login = document.getElementById("user").value;
     const input_pass = document.getElementById("pass").value;
@@ -49,48 +122,6 @@ function Login() {
     }
 }
 
-function UpdateDashBoard(page) {
-    var url;
-    const _municipio_ = mudancas[municipio] ? mudancas[municipio] : municipio;
-    url = `https://lookerstudio.google.com/embed/reporting/bee3dcaf-bd6e-41a0-ab2f-79f921aacc2a/page/${page}?params=${encodeURIComponent(
-        JSON.stringify({
-            "ds400._cidade": _municipio_,
-            "ds298._cidade": municipio,
-            "ds371._cidade": municipio,
-            "ds385._cidade": municipio
-        })
-    )}`;
-
-    const iframe = document.getElementById("lookerIframe");
-    iframe.src = url;
-
-    // Salvar sessão no localStorage
-    if (municipio) {
-        const sessionData = {
-            municipio: municipio,
-            currentPage: page,
-        };
-        localStorage.setItem('userSession', JSON.stringify(sessionData));
-    }
-}
-
-function showError(content) {
-    const messages = document.getElementById("messages");
-    const message = document.createElement("h1");
-    message.classList.add("message");
-    message.innerText = content;
-    messages.appendChild(message);
-
-    setTimeout(() => {
-        messages.removeChild(message);
-    }, 5000);
-}
-
-function show(id) {
-    for (let section of sections) {
-        section.style.display = section.id === id ? "" : "none";
-    }
-}
 
 function Logout() {
     localStorage.removeItem('userSession');
