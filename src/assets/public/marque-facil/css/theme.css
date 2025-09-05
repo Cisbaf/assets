@@ -1388,7 +1388,7 @@ a.text-dark:focus {
   display: block;
   margin: 15px auto;
   width: 100%;
-  max-width: 240px;
+  max-width: 90%;
   background-color: #fff;
   border-radius: 4px;
   box-shadow: 0 2px 6px rgba(154, 159, 151, 0.2);
