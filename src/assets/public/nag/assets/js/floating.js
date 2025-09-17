@@ -1,6 +1,5 @@
 const menu = document.getElementById('draggableMenu');
-const userIcon = document.getElementById('userIcon');
-const dropdown = document.getElementById('userDropdown');
+
 
 let activePointerId = null;
 let dragging = false;
@@ -28,7 +27,8 @@ function applyPosition(left){
 // inicia captura e prepara variáveis
 function onPointerDown(e){
   // 🚨 se clicou no submenu (ícone ou dropdown), não iniciar drag
-  if (e.target.closest('.user-menu')) return;
+  console.log(e.target.tagName);
+  if (e.target.tagName === "BUTTON" || e.target.tagName === "LABEL" || e.target.closest("button")) return;
 
   activePointerId = e.pointerId;
   dragging = true;
@@ -136,25 +136,6 @@ function onResize(){
   }
 }
 
-function SetDashboardName(name) {
-  const boxes = document.querySelectorAll(".MunicipioInfo");
-  if (!boxes) setTimeout(()=>SetDashboardName(name), 300);
-  else {
-    boxes.forEach(el => {
-      el.innerHTML = name;
-    });
-  }
-}
-
-
-function SetDashboardPageTitle(name) {
-  const logo = document.getElementById("labelPage");
-  if (!logo) setTimeout(()=>SetDashboardPageTitle(name), 300);
-  else {
-    logo.innerHTML = name;
-  }
-}
-
 
 // Listener pointer (abrange mouse+touch+pen)
 menu.addEventListener('pointerdown', onPointerDown);
@@ -178,18 +159,3 @@ menu.addEventListener('keydown', (e) => {
   }
 });
 
-/* -----------------------------
-   Submenu do usuário
-------------------------------*/
-if(userIcon && dropdown){
-  userIcon.addEventListener('click', (e) => {
-    e.stopPropagation();
-    dropdown.classList.toggle('show');
-  });
-
-  document.addEventListener('click', (e) => {
-    if(!userIcon.contains(e.target)){
-      dropdown.classList.remove('show');
-    }
-  });
-}

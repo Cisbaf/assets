@@ -1,63 +1,45 @@
 const express = require("express");
-const fs = require("fs");
 const path = require("path");
 const app = express();
 const cors = require('cors');
 
-const { Ofuscar } = require("./transform.js");
+const { LoadFiles, GetPathAfterPublic, Ofuscar } = require("./utils.js");
 
-app.use(express.static(__dirname+'/src/assets'));
-app.use(require('cors')());
+app.use(express.static(__dirname + '/src/assets'));
+app.use(cors());
 
-app.get('/', (req, res)=>{
-    res.redirect("/relatorios");
-})
+// Função genérica para rotas que carregam HTML + CSS + JS
+function servePage(route, htmlFiles, jsFiles = [], cssFiles = []) {
+    app.get(route, (req, res) => {
+        const htmlContent = LoadFiles(GetPathAfterPublic(route.slice(1)), htmlFiles);
+        const jsContent = LoadFiles(GetPathAfterPublic(`${route.slice(1)}/assets/js`), jsFiles);
+        const cssContent = LoadFiles(GetPathAfterPublic(`${route.slice(1)}/assets/css`), cssFiles);
+        const result = Ofuscar(htmlContent, jsContent, cssContent);
+        res.send(result);
+    });
+}
 
-app.get("/duvidas-nep",(req,res)=>{
-res.sendFile(__dirname+"/src/assets/public/duvidas-nep/index.html");
-})
+function serveFile(route, path) {
+  app.get(route, (req, res) => {
+      res.sendFile(path);
+  })
+}
 
-app.get("/cartilha",(req,res)=>{
-res.sendFile(__dirname+"/src/assets/public/cartilha/index.html");
-})
+// Rota Nag
+servePage("/nag", ["index.html"], ["backdrop.js", "floating.js", "menu.js", "page.js"], 
+          ['style.css', 'login.css', 'menu.css', 'divFloating.css']);
 
-app.get("/relatorios", (req, res)=>{
-    const htmlPath = path.join(__dirname, "src/assets/public/relatorios/index.html");
-    const htmlContent = fs.readFileSync(htmlPath, "utf8");
-    const jsPath = path.join(__dirname, "src/assets/public/relatorios/script.js")
-    const jsContent = fs.readFileSync(jsPath, "utf8");
-    const cssPath = path.join(__dirname, "src/assets/public/relatorios/style.css")
-    const cssContent = fs.readFileSync(cssPath, "utf8");
-    const result = Ofuscar(htmlContent, jsContent, cssContent);
-    res.send(result);
-})
+// Rota Indicadores
+servePage("/relatorios", ["index.html"], ["script.js"], ["style.css"]);
 
-app.get("/nag", (req, res)=>{
-    const htmlPath = path.join(__dirname, "src/assets/public/nag/index.html");
-    const htmlContent = fs.readFileSync(htmlPath, "utf8");
-    const jsPath = path.join(__dirname, "src/assets/public/nag/script.js")
-    const jsContent = fs.readFileSync(jsPath, "utf8");
-    const menuPath = path.join(__dirname, "src/assets/public/nag/menufloating.js")
-    const menuContent = fs.readFileSync(menuPath, "utf8");
-    const backdropPath = path.join(__dirname, "src/assets/public/nag/backdrop.js")
-    const backdropContent = fs.readFileSync(backdropPath, "utf8");
-    const union = `${backdropContent}\n\n${menuContent}\n\n${jsContent}`;
-    const cssPath = path.join(__dirname, "src/assets/public/nag/style.css")
-    const cssContent = fs.readFileSync(cssPath, "utf8");
-    const result = Ofuscar(htmlContent, union, cssContent);
-    res.send(result);
-})
+// Rota Cartilha
+servePage("/cartilha", ["index.html"]);
 
-app.get("/nag/logo", (req, res)=>{
-  const logo = path.join(__dirname, "src/assets/public/nag/assets/cisbaf_logo.png");
-  res.sendFile(logo); // envia o arquivo de imagem
-})
+// Rotas Static Nag
+serveFile("/nag/logo", GetPathAfterPublic("nag/assets/img/cisbaf_logo.png"));
+serveFile("/nag/background", GetPathAfterPublic("nag/assets/img/flat.png"));
 
-app.get("/nag/background", (req, res)=>{
-  const logo = path.join(__dirname, "src/assets/public/nag/assets/flat.png");
-  res.sendFile(logo); // envia o arquivo de imagem
-})
-
-app.listen("8000",()=>{
-    console.log("Servidor inicializado!");
-})
+// Inicialização do servidor
+app.listen(8000, () => {
+    console.log("Servidor inicializado na porta 8000!");
+});

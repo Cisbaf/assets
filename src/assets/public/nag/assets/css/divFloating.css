@@ -1,0 +1,36 @@
+:root { --menu-top: 14px; }
+
+/* --- seu CSS original (copiado/adaptado) --- */
+#draggableMenu{
+  position:absolute;
+  top: var(--menu-top);
+  left: 30vw;
+  display:flex;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background:#862525;
+  color:#fff;
+  border-radius:14px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.18);
+  user-select:none;
+  touch-action:none;
+  cursor: grab;
+  transition: box-shadow .18s ease, transform .12s ease;
+  will-change: left;
+  white-space:nowrap;
+  /* garantir que dropdown não seja cortado por overflow inesperado */
+  overflow: visible;
+  z-index: 1000;
+}
+
+#draggableMenu.dragging{
+  cursor: grabbing;
+  transform: translateY(-2px);
+  box-shadow:0 14px 30px rgba(0,0,0,0.22);
+}
+
+
+/* pequeno feedback visual ao tocar/arrastar no mobile */
+@media (hover: none){
+  #draggableMenu { padding:12px 18px; }
+}

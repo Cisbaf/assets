@@ -114,7 +114,7 @@ function Login() {
             throw new Error("Usuário ou senha incorretos!");
         }
         municipio = verific["search"];
-        UpdateDashBoard("p_sbunr82lkd", true);
+        UpdateDashBoard("p_sbunr82lkd");
         show("dash");
     } catch (e) {
         showError(e.message);

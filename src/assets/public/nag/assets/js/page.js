@@ -1,0 +1,141 @@
+const sections = document.getElementsByTagName("section");
+const urlPrincipalLooker = "https://lookerstudio.google.com/embed/reporting/645c0418-5111-445e-bdc0-6791e22fb09e/page"
+
+var COUNTRY;
+
+const mappingAuth = {
+    'belfordroxo': {'password': 'e57fde6f1d', 'search': 'Belford Roxo'},
+    'caxias': {'password': 'a5b3b0d136', 'search': 'Duque de Caxias'},
+    'itaguai': {'password': 'e898eab2ab', 'search': 'Itaguai'},
+    'japeri': {'password': '25a3d11c77', 'search': 'Japeri'},
+    'mage': {'password': '9a519a0f7d', 'search': 'Magé'},
+    'mesquita': {'password': 'b875be9982', 'search': 'Mesquita'},
+    'nilopolis': {'password': 'a013633a31', 'search': 'Nilópolis'},
+    'novaiguacu': {'password': '14583cdadc', 'search': 'Nova Iguaçu'},
+    'paracambi': {'password': 'c926a17e72', 'search': 'Paracambi'}, // ??
+    'queimados': {'password': 'a8e124db44', 'search': 'Queimados'},
+    'saojoao': {'password': '2d0c31fb56', 'search': 'São João de Meriti'}, // ?
+    'seropedica': {'password': '2b5169eb42', 'search': 'Seropedica'},
+}
+
+const mappingPages = {
+    "G22MF": {params: "ds0.municipio", title: "Monitoramento"},
+    "p_vy1tgkq4sd": {params: "ds2.municipio", title: "Pactuado"},
+    "p_n0gowcq6sd": {params: "ds2.municipio", title: "Pactuado x Informado"},
+    "p_3j7qsvxjtd": {params: "ds0.municipio", title: "Beneficiados pelo PMAE"},
+    "p_9llnbgdatd": {params: "ds10.municipio", title: "Monitora Produção TABNET"}
+}
+
+async function updateSessionAndPage(country, page) {
+    return new Promise((resolve, reject)=>{
+       try {
+        if (!country || !page) reject();
+        const sessionData = {
+            country: country,
+            currentPage: page,
+        };
+        localStorage.setItem('userSession', JSON.stringify(sessionData));
+        resolve();
+       } catch {
+        reject();
+       }
+    })
+}
+
+function setUrlForIframe(url) {
+    const iframe = document.getElementById("lookerIframe");
+    iframe.src = url;
+}
+
+function makeUrl(page, params) {
+    const url = `${urlPrincipalLooker}/${page}?params=${encodeURIComponent(JSON.stringify(params))}`;
+    return url;
+}
+
+
+Object.keys(mappingAuth).forEach(page=>{
+    const name = mappingAuth[page].search;
+    console.log(`${name} > ${makeUrl("p_vy1tgkq4sd", {"ds2.municipio": name})}\n`)
+})
+
+
+function UpdateDashBoard(page_url) {
+    const page = mappingPages[page_url];
+    const param = { [page["params"]]: COUNTRY };
+    const url = makeUrl(page_url, param);
+    setUrlForIframe(url);
+    // Salvar sessão e pagina atual no localStorage
+    updateSessionAndPage(COUNTRY, page_url);
+    HighlightMenu(page["title"]);
+    showBackdrop(5000);
+    
+}
+
+function showError(content) {
+    const messages = document.getElementById("messages");
+    const message = document.createElement("h1");
+    message.classList.add("message");
+    message.innerText = content;
+    messages.appendChild(message);
+
+    setTimeout(() => {
+        messages.removeChild(message);
+    }, 3000);
+}
+
+function show(id) {
+    for (let section of sections) {
+        section.style.display = section.id === id ? "" : "none";
+    }
+}
+
+function Login() {
+    const input_login = document.getElementById("user").value;
+    const input_pass = document.getElementById("pass").value;
+
+    try {
+        if (!input_login || !input_pass) {
+            throw new Error("Digite a senha e o usuário!");
+        }
+        const verific = mappingAuth[input_login];
+        if (!verific) {
+            throw new Error("Usuário ou senha incorretos!");
+        }
+        if (verific["password"] != input_pass) {
+            throw new Error("Usuário ou senha incorretos!");
+        }
+        COUNTRY = verific["search"];
+        UpdateDashBoard("G22MF");
+        show("dash");
+        SetDashboardName(COUNTRY);
+    } catch (e) {
+        showError(e.message);
+    }
+}
+
+function Logout() {
+    showBackdrop(1000);
+    setTimeout(()=>{
+        localStorage.removeItem('userSession');
+        COUNTRY = "";
+        show("login");
+    }, 1000);
+}
+
+// Verificar sessão ao carregar a página
+const savedSession = localStorage.getItem('userSession');
+if (savedSession) {
+    try {
+        const sessionData = JSON.parse(savedSession);
+        COUNTRY = sessionData.country;
+        show("dash");
+        SetDashboardName(COUNTRY);
+        UpdateDashBoard(sessionData.currentPage);
+    } catch (e) {
+        console.error('Erro ao restaurar a sessão:', e);
+        localStorage.removeItem('userSession');
+        show("login");
+    }
+} else {
+    show("login");
+}
