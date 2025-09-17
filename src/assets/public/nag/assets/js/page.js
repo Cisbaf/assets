@@ -12,7 +12,6 @@ const mappingAuth = {
     'mesquita': {'password': 'b875be9982', 'search': 'Mesquita'},
     'nilopolis': {'password': 'a013633a31', 'search': 'Nilópolis'},
     'novaiguacu': {'password': '14583cdadc', 'search': 'Nova Iguaçu'},
-    'paracambi': {'password': 'c926a17e72', 'search': 'Paracambi'}, // ??
     'queimados': {'password': 'a8e124db44', 'search': 'Queimados'},
     'saojoao': {'password': '2d0c31fb56', 'search': 'São João de Meriti'}, // ?
     'seropedica': {'password': '2b5169eb42', 'search': 'Seropedica'},
@@ -51,13 +50,6 @@ function makeUrl(page, params) {
     const url = `${urlPrincipalLooker}/${page}?params=${encodeURIComponent(JSON.stringify(params))}`;
     return url;
 }
-
-
-Object.keys(mappingAuth).forEach(page=>{
-    const name = mappingAuth[page].search;
-    console.log(`${name} > ${makeUrl("p_vy1tgkq4sd", {"ds2.municipio": name})}\n`)
-})
-
 
 function UpdateDashBoard(page_url) {
     const page = mappingPages[page_url];
