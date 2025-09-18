@@ -20,9 +20,12 @@ const mappingAuth = {
 const mappingPages = {
     "G22MF": {params: "ds0.municipio", title: "Monitoramento"},
     "p_vy1tgkq4sd": {params: "ds2.municipio", title: "Pactuado"},
-    "p_n0gowcq6sd": {params: "ds2.municipio", title: "Pactuado x Informado"},
+    "p_n0gowcq6sd": {params: "ds2.municipio", title: "Pactuado x Informado", secondParams: "ds0.municipio"},
     "p_3j7qsvxjtd": {params: "ds0.municipio", title: "Beneficiados pelo PMAE"},
-    "p_9llnbgdatd": {params: "ds10.municipio", title: "Monitora Produção TABNET"}
+    "p_c51yrn0jtd": {params: "ds0.municipio", title: "Absenteísmo nas atividades OCI"},
+    "p_d62oi0juud": {params: "ds0.municipio", title: "OCI por CID"},
+    "p_9llnbgdatd": {params: "ds10.municipio", title: "Monitora Produção TABNET"},
+    "p_vflv15fctd": {params: "ds8.municipio", title: "Etapas Plano de Ação"},
 }
 
 async function updateSessionAndPage(country, page) {
@@ -43,6 +46,10 @@ async function updateSessionAndPage(country, page) {
 
 function setUrlForIframe(url) {
     const iframe = document.getElementById("lookerIframe");
+    iframe.onload = function () {
+        hideBackdrop();
+    };
+
     iframe.src = url;
 }
 
@@ -52,15 +59,25 @@ function makeUrl(page, params) {
 }
 
 function UpdateDashBoard(page_url) {
-    const page = mappingPages[page_url];
-    const param = { [page["params"]]: COUNTRY };
-    const url = makeUrl(page_url, param);
-    setUrlForIframe(url);
-    // Salvar sessão e pagina atual no localStorage
-    updateSessionAndPage(COUNTRY, page_url);
-    HighlightMenu(page["title"]);
-    showBackdrop(5000);
-    
+    try {
+        updateSessionAndPage(COUNTRY, page_url);
+        showBackdrop(5000);
+        const page = mappingPages[page_url];
+        const param1 = page["params"];
+        const param2 = page["secondParams"];
+        const params = { [param1]: COUNTRY };
+        if (param2) {
+            params[param2] = COUNTRY;
+        }
+        const url = makeUrl(page_url, params);
+        setUrlForIframe(url);
+        // Salvar sessão e pagina atual no localStorage
+        HighlightMenu(page["title"]);
+
+    } catch (e) {
+        showError("Erro ao tentar atualizar dashboard" + String(e));
+    }
+
 }
 
 function showError(content) {

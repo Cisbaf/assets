@@ -27,7 +27,6 @@ function applyPosition(left){
 // inicia captura e prepara variáveis
 function onPointerDown(e){
   // 🚨 se clicou no submenu (ícone ou dropdown), não iniciar drag
-  console.log(e.target.tagName);
   if (e.target.tagName === "BUTTON" || e.target.tagName === "LABEL" || e.target.closest("button")) return;
 
   activePointerId = e.pointerId;

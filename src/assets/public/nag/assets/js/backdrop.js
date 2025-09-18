@@ -1,26 +1,49 @@
+let backdropTimeout = null;
+let backdropElement = null;
+
 function showBackdrop(duration = 2000) {
+    // Se já existe, não cria outro
+    if (backdropElement) return;
+
     // Cria backdrop
-    const backdrop = document.createElement('div');
-    backdrop.classList.add('backdrop');
+    backdropElement = document.createElement('div');
+    backdropElement.classList.add('backdrop');
 
     // Cria loader
     const loader = document.createElement('div');
     loader.classList.add('loader');
 
     // Adiciona loader ao backdrop
-    backdrop.appendChild(loader);
-    document.body.appendChild(backdrop);
+    backdropElement.appendChild(loader);
+    document.body.appendChild(backdropElement);
 
     // Mostra com animação
     requestAnimationFrame(() => {
-        backdrop.classList.add('show');
+        backdropElement.classList.add('show');
     });
 
-    // Remove depois do tempo definido
-    setTimeout(() => {
-        backdrop.classList.remove('show');
-        backdrop.addEventListener('transitionend', () => {
-            backdrop.remove();
-        });
+    // Agenda remoção automática
+    backdropTimeout = setTimeout(() => {
+        hideBackdrop();
     }, duration);
+}
+
+function hideBackdrop() {
+    if (!backdropElement) return;
+
+    // Cancela timeout automático (se existir)
+    if (backdropTimeout) {
+        clearTimeout(backdropTimeout);
+        backdropTimeout = null;
+    }
+
+    backdropElement.classList.remove('show');
+    backdropElement.addEventListener(
+        'transitionend',
+        () => {
+            backdropElement?.remove();
+            backdropElement = null;
+        },
+        { once: true } // garante que só escuta uma vez
+    );
 }

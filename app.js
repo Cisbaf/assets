@@ -38,6 +38,8 @@ servePage("/cartilha", ["index.html"]);
 // Rotas Static Nag
 serveFile("/nag/logo", GetPathAfterPublic("nag/assets/img/cisbaf_logo.png"));
 serveFile("/nag/background", GetPathAfterPublic("nag/assets/img/flat.png"));
+serveFile("/nag/fav", GetPathAfterPublic("nag/assets/img/favicon.ico"));
+
 
 // Inicialização do servidor
 app.listen(8000, () => {
