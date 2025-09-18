@@ -4,18 +4,19 @@ const urlPrincipalLooker = "https://lookerstudio.google.com/embed/reporting/645c
 var COUNTRY;
 
 const mappingAuth = {
-    'belfordroxo': {'password': 'e57fde6f1d', 'search': 'Belford Roxo'},
-    'caxias': {'password': 'a5b3b0d136', 'search': 'Duque de Caxias'},
-    'itaguai': {'password': 'e898eab2ab', 'search': 'Itaguai'},
-    'japeri': {'password': '25a3d11c77', 'search': 'Japeri'},
-    'mage': {'password': '9a519a0f7d', 'search': 'Magé'},
-    'mesquita': {'password': 'b875be9982', 'search': 'Mesquita'},
-    'nilopolis': {'password': 'a013633a31', 'search': 'Nilópolis'},
-    'novaiguacu': {'password': '14583cdadc', 'search': 'Nova Iguaçu'},
-    'queimados': {'password': 'a8e124db44', 'search': 'Queimados'},
-    'saojoao': {'password': '2d0c31fb56', 'search': 'São João de Meriti'}, // ?
-    'seropedica': {'password': '2b5169eb42', 'search': 'Seropedica'},
+    'belfordroxo': {'password': 'belfordroxo579', 'search': 'Belford Roxo'},
+    'caxias': {'password': 'caxias450', 'search': 'Duque de Caxias'},
+    'itaguai': {'password': 'itaguai689', 'search': 'Itaguai'},
+    'japeri': {'password': 'japeri25a', 'search': 'Japeri'},
+    'mage': {'password': 'mage905', 'search': 'Magé'},
+    'mesquita': {'password': 'mesquita087', 'search': 'Mesquita'},
+    'nilopolis': {'password': 'nilopolis601', 'search': 'Nilópolis'},
+    'novaiguacu': {'password': 'novaiguacu145', 'search': 'Nova Iguaçu'},
+    'queimados': {'password': 'queimados787', 'search': 'Queimados'},
+    'saojoao': {'password': 'saojoao236', 'search': 'São João de Meriti'}, // ?
+    'seropedica': {'password': 'seropedica265', 'search': 'Seropedica'},
 }
+
 
 const mappingPages = {
     "G22MF": {params: "ds0.municipio", title: "Monitoramento"},
