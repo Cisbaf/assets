@@ -1,3 +1,5 @@
+
+
 class MenuComponent extends HTMLElement {
   constructor() {
     super();
@@ -19,3 +21,33 @@ class MenuComponent extends HTMLElement {
 }
 
 customElements.define("menu-navegacao", MenuComponent);
+
+
+window.addEventListener("load", () => {
+    document.querySelectorAll('#navbarDropdown').forEach(element => {
+        element.addEventListener('click', function(event) {
+            event.stopImmediatePropagation();
+            event.preventDefault();
+
+            const submenu = this.nextElementSibling;
+
+            // Fecha todos os outros submenus
+            document.querySelectorAll('.dropdown-submenu .dropdown-menu.show').forEach(menu => {
+                if (menu !== submenu) {
+                    menu.classList.remove('show');
+                }
+            });
+
+            // Alterna o submenu clicado
+            submenu.classList.toggle('show');
+        });
+    });
+
+    // Fecha submenus ao clicar fora
+
+    document.addEventListener('click', function(){
+        document.querySelectorAll('.dropdown-menu.show').forEach(function(menu){
+        menu.classList.remove('show');
+        });
+    });
+});
