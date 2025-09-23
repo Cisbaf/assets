@@ -91,7 +91,7 @@
   }
 
   .promo-section {
-      flex: 1;
+      flex: 2;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -156,3 +156,8 @@
           display: none;
       }
   }
+
+
+.banner {
+    width: 300px;
+}

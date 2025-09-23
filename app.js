@@ -39,6 +39,7 @@ servePage("/cartilha", ["index.html"]);
 serveFile("/nag/logo", GetPathAfterPublic("nag/assets/img/cisbaf_logo.png"));
 serveFile("/nag/background", GetPathAfterPublic("nag/assets/img/flat.png"));
 serveFile("/nag/fav", GetPathAfterPublic("nag/assets/img/favicon.ico"));
+serveFile("/nag/banner", GetPathAfterPublic("nag/assets/img/banner.png"))
 
 
 // Inicialização do servidor
