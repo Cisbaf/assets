@@ -91,7 +91,6 @@ async function SaveSession(currentPage) {
         SESSION.currentPage = currentPage;
     }
     localStorage.setItem('userSession', JSON.stringify(SESSION));
-    console.log("save session", SESSION);
 }
 
 
@@ -117,7 +116,6 @@ window.addEventListener("load", ()=>{
             const sessionData = JSON.parse(savedSession);
             SESSION.auth = sessionData.auth;
             SESSION.currentPage = sessionData.currentPage;
-            console.log(SESSION.currentPage);
             callbackUpdateDashboard(SESSION.currentPage);
             showSection("dash");
         } catch (e) {
