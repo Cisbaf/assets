@@ -3,18 +3,19 @@ const path = require("path");
 const app = express();
 const cors = require('cors');
 
-const { LoadFiles, GetPathAfterPublic, Ofuscar } = require("./utils.js");
+const { LoadFiles, GetPathAfterPublic, Ofuscar, UnionFiles } = require("./utils.js");
 
 app.use(express.static(__dirname + '/src/assets'));
 app.use(cors());
 
 // Função genérica para rotas que carregam HTML + CSS + JS
-function servePage(route, htmlFiles, jsFiles = [], cssFiles = []) {
+function servePage(route, htmlFiles, jsFiles = [], cssFiles = [], components = []) {
     app.get(route, (req, res) => {
         const htmlContent = LoadFiles(GetPathAfterPublic(route.slice(1)), htmlFiles);
         const jsContent = LoadFiles(GetPathAfterPublic(`${route.slice(1)}/assets/js`), jsFiles);
         const cssContent = LoadFiles(GetPathAfterPublic(`${route.slice(1)}/assets/css`), cssFiles);
-        const result = Ofuscar(htmlContent, jsContent, cssContent);
+        const componentsContent = LoadFiles(GetPathAfterPublic(`${route.slice(1)}/assets/components`), components);
+        const result = Ofuscar(htmlContent, jsContent.concat(componentsContent), cssContent);
         res.send(result);
     });
 }
@@ -26,8 +27,10 @@ function serveFile(route, path) {
 }
 
 // Rota Nag
-servePage("/nag", ["index.html"], ["backdrop.js", "floating.js", "menu.js", "page.js"], 
-          ['style.css', 'login.css', 'menu.css', 'divFloating.css']);
+servePage("/nag", ["index.html"], ["backdrop.js", "floating.js", "menu.js", "session.js", "page.js"], 
+        ['style.css', 'login.css', 'menu.css', 'divFloating.css'],
+        ["select-municipio.js"]
+        );
 
 // Rota Indicadores
 servePage("/relatorios", ["index.html"], ["script.js"], ["style.css"]);

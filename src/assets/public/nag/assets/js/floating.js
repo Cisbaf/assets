@@ -28,7 +28,7 @@ function applyPosition(left){
 function onPointerDown(e){
   // 🚨 se clicou no submenu (ícone ou dropdown), não iniciar drag
   if (e.target.tagName === "BUTTON" || e.target.tagName === "LABEL" || e.target.closest("button")) return;
-
+  if (e.target.tagName === "SELECT") return;
   activePointerId = e.pointerId;
   dragging = true;
   menu.setPointerCapture(activePointerId);

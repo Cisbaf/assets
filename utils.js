@@ -30,5 +30,9 @@ function LoadFiles(folder_path, files) {
     }).join('\n'); // junta com quebras de linha entre os arquivos
 }
 
+function UnionFiles(files = []) {
+  return files.map(f => f).join("");
+}
 
-module.exports = { LoadFiles, GetPathAfterPublic, Ofuscar};
+
+module.exports = { LoadFiles, GetPathAfterPublic, Ofuscar, UnionFiles};

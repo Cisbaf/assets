@@ -14,11 +14,11 @@
   text-align: center;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   opacity: 1;
-  top: 10%;
-  left: 15%;
   position: absolute;
   transform: translateY(-20px);
   animation: floatInOut 5s ease-in-out forwards;
+    width: max-content;
+    max-width: 800px;
 }
 
 /* Backdrop container */
@@ -57,3 +57,19 @@
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+select {
+  font-family: inherit;   /* herda a fonte usada no título */
+  font-size: 1.0em;       /* ajuste para ficar proporcional */
+  font-weight: bold;      /* deixa em negrito igual ao título */
+  color: white;           /* cor do texto */
+  background:#862525;
+  border: none;           /* remove borda padrão */
+  padding: 5px 10px;      /* espaço interno */
+  border-radius: 4px;     /* cantos arredondados */
+  text-wrap: wrap;
+  max-width: 150px;
+  height: 50px;
+}
+
+
