@@ -13,6 +13,8 @@ if(userIcon && dropdown){
 
   document.addEventListener('click', (e) => {
     if(!userIcon.contains(e.target)){
+      if (e.target.tagName === "SELECT") return;
+
       dropdown.classList.remove('show');
     }
   });
