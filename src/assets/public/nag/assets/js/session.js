@@ -10,7 +10,7 @@ const MAP_AUTH = {
     'queimados': {'password': 'queimados787', 'search': 'Queimados'},
     'saojoao': {'password': 'saojoao236', 'search': 'São João de Meriti'}, // ?
     'seropedica': {'password': 'seropedica265', 'search': 'Seropedica'},
-    'cisbaf': {'password': "adm"},
+    'cisbaf': {'password': "cisbaf_nag_adm"},
 }
 
 
@@ -83,6 +83,7 @@ function Logout() {
     SESSION.currentPage = null;
     setTimeout(()=>{
         showSection("login");
+        window.location.reload();
     }, 1000);
 }
 
