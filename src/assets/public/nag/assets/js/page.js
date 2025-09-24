@@ -46,13 +46,14 @@ function makeUrl(page, params) {
 function UpdateDashBoard(page_url) {
     const page_key = page_url? page_url : FIRST_PAGE; 
     try {
+        SaveSession(page_key);
+
         // Salvar sessão e pagina atual no localStorage
         const page = mappingPages[page_key];
         const param1 = page["params"];
         const param2 = page["secondParams"];
         const pageSearch = GetNameForSearch(HACKED_AUTH);
         if (!pageSearch) {
-            SaveSession(page_key);
             showError("Selecione um municipio para continuar!", "center");
             return;
         }

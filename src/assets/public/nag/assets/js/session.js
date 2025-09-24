@@ -67,12 +67,10 @@ function Login() {
             callbackUpdateDashboard(SESSION.currentPage);
             callbackUpdateSelection();
         } catch(e) {
-            console.log("Erro inesperado, envie um print para os desenvolvedores!");
-            console.log(e);
+            showError("Erro inesperado, envie um print para os desenvolvedores!" + String(e), "top-center");
         }
         showSection("dash");
     } catch (e) {
-        console.log(e);
         showError(e.message, "page-login");
     }
 }
