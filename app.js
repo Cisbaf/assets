@@ -46,6 +46,6 @@ serveFile("/nag/banner", GetPathAfterPublic("nag/assets/img/banner.png"))
 
 
 // Inicialização do servidor
-app.listen(8001, () => {
+app.listen(8000, () => {
     console.log("Servidor inicializado na porta 8000!");
 });

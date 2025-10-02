@@ -20,7 +20,6 @@ const SEARCH_ALL = Object.values(MAP_AUTH)
 
 MAP_AUTH['caosaudepjtcs']['search'] = SEARCH_ALL;
 
-console.log(MAP_AUTH);
 
 const SESSION = {
     auth: null,
@@ -101,7 +100,6 @@ async function SaveSession(currentPage) {
     }
     localStorage.setItem('userSession', JSON.stringify(SESSION));
 }
-
 
 // utils
 function GetSelectOptions() {
