@@ -10,9 +10,17 @@ const MAP_AUTH = {
     'queimados': {'password': 'queimados787', 'search': 'Queimados'},
     'saojoao': {'password': 'saojoao236', 'search': 'São João de Meriti'}, // ?
     'seropedica': {'password': 'seropedica265', 'search': 'Seropedica'},
-    'cisbaf': {'password': "cisbaf_nag_adm"},
+    'cisbaf': {'password': "cisbaf_nag"},
+    'caosaudepjtcs': {'password': 'caosaudepjtcs'}
 }
 
+const SEARCH_ALL = Object.values(MAP_AUTH)
+.map(obj=>obj.search)
+.filter(obj=>obj).join("|");
+
+MAP_AUTH['caosaudepjtcs']['search'] = SEARCH_ALL;
+
+console.log(MAP_AUTH);
 
 const SESSION = {
     auth: null,
@@ -99,6 +107,7 @@ async function SaveSession(currentPage) {
 function GetSelectOptions() {
     const infos = Object.keys(MAP_AUTH).map(key=>{
         if (key == "cisbaf") return;
+        if (key == "caosaudepjtcs") return;
         return {[key]: MAP_AUTH[key].search};
     });
 
@@ -106,7 +115,16 @@ function GetSelectOptions() {
 }
 
 function GetNameForSearch(hacked) {
-    if (hacked) return MAP_AUTH[hacked].search;
+    if (IsAdm()) {
+        if (hacked == "all" || !hacked) return SEARCH_ALL;
+        if (hacked) return MAP_AUTH[hacked].search;
+    }
+    return MAP_AUTH[SESSION.auth].search;
+}
+
+function GetNameForTitle(hacked) {
+    if (IsAdm()) return "Cisbaf";
+    if (SESSION.auth === "caosaudepjtcs") return "MINISTÉRIO PÚBLICO";
     return MAP_AUTH[SESSION.auth].search;
 }
 

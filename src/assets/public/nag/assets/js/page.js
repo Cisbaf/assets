@@ -52,20 +52,18 @@ function UpdateDashBoard(page_url) {
         const page = mappingPages[page_key];
         const param1 = page["params"];
         const param2 = page["secondParams"];
+        
         const pageSearch = GetNameForSearch(HACKED_AUTH);
-        if (!pageSearch) {
-            showError("Selecione um municipio para continuar!", "center");
-            return;
-        }
-        showBackdrop(5000);
+
+        showBackdrop(5000, `${page["title"].toUpperCase()}...`);
         const params = { [param1]: pageSearch };
         if (param2) {
             params[param2] = pageSearch;
         }
         const url = makeUrl(page_key, params);
         setUrlForIframe(url);
-        SetDashboardName(pageSearch);
         HighlightMenu(page["title"]);
+        SetDashboardName(GetNameForTitle(HACKED_AUTH));
     } catch (e) {
         showError("Erro ao tentar atualizar dashboard" + String(e));
     }

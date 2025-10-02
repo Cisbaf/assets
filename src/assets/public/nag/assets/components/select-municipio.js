@@ -16,7 +16,7 @@ class SelectMunicipio extends HTMLElement {
 
         this.innerHTML = `
         <select id="municipio-select">
-            <option value="">Selecione um município</option>
+            <option value="all">Visualizar Todos</option>
             ${options}
         </select>
         `;

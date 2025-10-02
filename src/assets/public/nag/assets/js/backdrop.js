@@ -1,7 +1,7 @@
 let backdropTimeout = null;
 let backdropElement = null;
 
-function showBackdrop(duration = 2000) {
+function showBackdrop(duration = 2000, text) {
     // Se já existe, não cria outro
     if (backdropElement) return;
 
@@ -13,8 +13,18 @@ function showBackdrop(duration = 2000) {
     const loader = document.createElement('div');
     loader.classList.add('loader');
 
+
+
     // Adiciona loader ao backdrop
     backdropElement.appendChild(loader);
+    // text
+    if (text) {
+        const message = document.createElement("h3");
+        message.innerText = text
+        message.classList.add("backdrop-text"); // adiciona classe de animação
+        backdropElement.appendChild(message);
+    }
+
     document.body.appendChild(backdropElement);
 
     // Mostra com animação
