@@ -10,6 +10,7 @@ const MAP_AUTH = {
     'queimados': {'password': 'queimados787', 'search': 'Queimados'},
     'saojoao': {'password': 'saojoao236', 'search': 'São João de Meriti'}, // ?
     'seropedica': {'password': 'seropedica265', 'search': 'Seropedica'},
+    'riodejaneiro': {'password': 'riodejaneiro746', 'search': 'Rio de Janeiro'},
     'cisbaf': {'password': "cisbaf_nag"},
     'caosaudepjtcs': {'password': 'caosaudepjtcs'}
 }
