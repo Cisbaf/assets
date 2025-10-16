@@ -86,7 +86,7 @@ function UpdateDashBoard(page_url) {
         
         const pageSearch = GetNameForSearch(HACKED_AUTH);
 
-        showBackdrop(5000, `${page["title"].toUpperCase()}...`);
+        showBackdrop(0, `${page["title"].toUpperCase()}...`);
         const params = { [param1]: pageSearch };
         if (param2) {
             params[param2] = pageSearch;

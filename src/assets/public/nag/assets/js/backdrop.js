@@ -32,10 +32,13 @@ function showBackdrop(duration = 2000, text) {
         backdropElement.classList.add('show');
     });
 
+    if (duration) {
     // Agenda remoção automática
-    backdropTimeout = setTimeout(() => {
-        hideBackdrop();
-    }, duration);
+        backdropTimeout = setTimeout(() => {
+            hideBackdrop();
+        }, duration);
+    }
+
 }
 
 function hideBackdrop() {
