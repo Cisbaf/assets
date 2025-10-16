@@ -4,15 +4,46 @@ const urlPrincipalLooker = "https://lookerstudio.google.com/embed/reporting/645c
 var HACKED_AUTH;
 
 const mappingPages = {
-    "G22MF": {params: "ds0.municipio", title: "Monitoramento"},
-    "p_vy1tgkq4sd": {params: "ds2.municipio", title: "Pactuado"},
-    "p_n0gowcq6sd": {params: "ds2.municipio", title: "Pactuado x Informado", secondParams: "ds0.municipio"},
-    "p_3j7qsvxjtd": {params: "ds0.municipio", title: "Beneficiados pelo PMAE"},
-    "p_c51yrn0jtd": {params: "ds0.municipio", title: "Absenteísmo nas atividades OCI"},
-    "p_d62oi0juud": {params: "ds0.municipio", title: "OCI por CID"},
-    "p_9llnbgdatd": {params: "ds10.municipio", title: "Monitora Produção TABNET"},
-    "p_vflv15fctd": {params: "ds8.municipio", title: "Etapas Plano de Ação"},
-}
+    "G22MF": { params: "ds0.municipio", title: "Monitoramento" },
+    "p_vy1tgkq4sd": { params: "ds2.municipio", title: "Pactuado" },
+    "p_n0gowcq6sd": { params: "ds2.municipio", title: "Pactuado x Informado", secondParams: "ds0.municipio" },
+    "p_3j7qsvxjtd": { params: "ds0.municipio", title: "Beneficiados pelo PMAE" },
+    "p_c51yrn0jtd": { params: "ds0.municipio", title: "Absenteísmo nas atividades OCI" },
+    "p_d62oi0juud": { params: "ds0.municipio", title: "OCI por CID" },
+    // ✅ Novo
+    "p_o7q7ob94wd": {
+        params: "ds12.municipio",
+        secondParams: "ds14.municipio",
+        title: "CNES Habilitados por Status"
+    },
+    // ✅ Novo
+    "p_j0s7vs35wd": {
+        params: "ds12.municipio",
+        title: "Geo Localização Estabelecimentos"
+    },
+    // ✅ Renomeado
+    "p_9llnbgdatd": {
+        params: "ds10.municipio",
+        title: "TABNET: Quantidade Aprovada"
+    },
+    // ✅ Novo
+    "p_pzc3jab6wd": {
+        params: "ds10.municipio",
+        title: "TABNET: Quantidade Apresentada e Executada"
+    },
+    // ✅ Novo
+    "p_vngu6rc6wd": {
+        params: "ds14.municipio",
+        title: "CNES Habilitações"
+    },
+    "p_vflv15fctd": { params: "ds8.municipio", title: "Etapas Plano de Ação" },
+    // ✅ Novo
+    "p_51ifyssrtd": {
+        params: "ds4.municipio",
+        title: "Check list_Quadro Geral"
+    },
+};
+
 
 const FIRST_PAGE = Object.keys(mappingPages)[0];
 
