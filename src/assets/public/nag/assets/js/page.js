@@ -8,7 +8,7 @@ const mappingPages = {
     "p_vy1tgkq4sd": { params: "ds2.municipio", title: "Pactuado" },
     "p_n0gowcq6sd": { params: "ds2.municipio", title: "Pactuado x Informado", secondParams: "ds0.municipio" },
     "p_3j7qsvxjtd": { params: "ds0.municipio", title: "Beneficiados pelo PMAE" },
-    "p_c51yrn0jtd": { params: "ds0.municipio", title: "Absenteísmo nas atividades OCI" },
+    "p_c51yrn0jtd": { params: "ds0.municipio", title: "Absenteísmo nas atividades OCI", secondParams: "ds12.municipio" },
     "p_d62oi0juud": { params: "ds0.municipio", title: "OCI por CID" },
     // ✅ Novo
     "p_o7q7ob94wd": {
