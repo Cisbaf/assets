@@ -12,7 +12,8 @@ const MAP_AUTH = {
     'seropedica': {'password': 'seropedica265', 'search': 'Seropedica'},
     'riodejaneiro': {'password': 'riodejaneiro746', 'search': 'Rio de Janeiro'},
     'cisbaf': {'password': "cisbaf_nag"},
-    'caosaudepjtcs': {'password': 'caosaudepjtcs'}
+    'caosaudepjtcs': {'password': 'caosaudepjtcs'},
+    'estadoriodejaneiro': {'password': 'estadoriodejaneiro', 'search': 'Estado Rio de Janeiro'}
 }
 
 const SEARCH_ALL = Object.values(MAP_AUTH)
