@@ -12,7 +12,7 @@ const mappingPages = {
     "p_d62oi0juud": { title: "OCI por CID", paramsList: ["ds0.municipio"] },
     "p_o7q7ob94wd": { title: "CNES Habilitados por Status", paramsList: ["ds12.municipio", "ds14.municipio"] },
     "p_j0s7vs35wd": { title: "Geo Localização Estabelecimentos", paramsList: ["ds12.municipio"] },
-    "p_9llnbgdatd": { title: "TABNET: Quantidade Aprovada", paramsList: ["ds10.municipio"] },
+    // "p_9llnbgdatd": { title: "TABNET: Quantidade Aprovada", paramsList: ["ds10.municipio"] },
     "p_pzc3jab6wd": { title: "TABNET: Quantidade Apresentada e Executada", paramsList: ["ds10.municipio"] },
     "p_vngu6rc6wd": { title: "CNES Habilitações", paramsList: ["ds14.municipio"] },
     "p_vflv15fctd": { title: "Etapas Plano de Ação", paramsList: ["ds8.municipio"] },
