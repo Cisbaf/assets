@@ -6,7 +6,7 @@ var HACKED_AUTH;
 const mappingPages = {
     "G22MF": { title: "Monitoramento", paramsList: ["ds0.municipio"] },
     "p_vy1tgkq4sd": { title: "Pactuado", paramsList: ["ds2.municipio"] },
-    "p_n0gowcq6sd": { title: "Pactuado x Informado", paramsList: ["ds2.municipio", "ds0.municipio", "ds16.municipio"] },
+    "p_n0gowcq6sd": { title: "Pactuado x Informado", paramsList: ["ds2.municipio", "ds0.municipio", "ds16.municipio", "ds18.municipio"] },
     "p_3j7qsvxjtd": { title: "Beneficiados pelo PMAE", paramsList: ["ds0.municipio"] },
     "p_c51yrn0jtd": { title: "Absenteísmo nas atividades OCI", paramsList: ["ds0.municipio", "ds12.municipio"] },
     "p_d62oi0juud": { title: "OCI por CID", paramsList: ["ds0.municipio"] },
