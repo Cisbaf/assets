@@ -1,0 +1,519 @@
+{
+  "gerado_em": "2026-10-22T11:16:10",
+  "gestores": [
+    {
+      "n": 1,
+      "gestor": "G1",
+      "municipio": "Belford Roxo",
+      "pagina_entrada": "e5a79856576c9429d20e",
+      "paginas": [
+        {
+          "titulo": "Pactuado vs Realizado -G1",
+          "id": "e5a79856576c9429d20e",
+          "oculta": false,
+          "base": "Pactuado vs Realizado",
+          "chave": "pactuado-vs-realizado"
+        },
+        {
+          "titulo": "TABNET - Apresentados e Aprovados -G1",
+          "id": "b7d51dd82253faf52572",
+          "oculta": false,
+          "base": "TABNET - Apresentados e Aprovados",
+          "chave": "tabnet-apresentados-e-aprovados"
+        },
+        {
+          "titulo": "TABNET - Migração -G1",
+          "id": "ed1296d4de09f13909fc",
+          "oculta": false,
+          "base": "TABNET - Migração",
+          "chave": "tabnet-migracao"
+        },
+        {
+          "titulo": "e-SUS Monitoramento -G1",
+          "id": "498e7a64b93dd7ee4ea4",
+          "oculta": false,
+          "base": "e-SUS Monitoramento",
+          "chave": "e-sus-monitoramento"
+        },
+        {
+          "titulo": "Monitoramento Produção -G1",
+          "id": "df32f08cfe2ea147cd03",
+          "oculta": false,
+          "base": "Monitoramento Produção",
+          "chave": "monitoramento-producao"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "gestor": "G2",
+      "municipio": "Duque de Caxias",
+      "pagina_entrada": "3622f02546895200d699",
+      "paginas": [
+        {
+          "titulo": "Pactuado vs Realizado -G2",
+          "id": "3622f02546895200d699",
+          "oculta": false,
+          "base": "Pactuado vs Realizado",
+          "chave": "pactuado-vs-realizado"
+        },
+        {
+          "titulo": "TABNET - Apresentados e Aprovados -G2",
+          "id": "a7aa1c947d802dfeadfe",
+          "oculta": false,
+          "base": "TABNET - Apresentados e Aprovados",
+          "chave": "tabnet-apresentados-e-aprovados"
+        },
+        {
+          "titulo": "TABNET - Migração -G2",
+          "id": "a7bb666dc150ca1c13af",
+          "oculta": false,
+          "base": "TABNET - Migração",
+          "chave": "tabnet-migracao"
+        },
+        {
+          "titulo": "e-SUS Monitoramento -G2",
+          "id": "677f37cae3be5953a025",
+          "oculta": false,
+          "base": "e-SUS Monitoramento",
+          "chave": "e-sus-monitoramento"
+        },
+        {
+          "titulo": "Monitoramento Produção -G2",
+          "id": "a1bc7112c69f8606106f",
+          "oculta": false,
+          "base": "Monitoramento Produção",
+          "chave": "monitoramento-producao"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "gestor": "G3",
+      "municipio": "Itaguaí",
+      "pagina_entrada": "b29ba34b43204a380f21",
+      "paginas": [
+        {
+          "titulo": "Pactuado vs Realizado -G3",
+          "id": "b29ba34b43204a380f21",
+          "oculta": false,
+          "base": "Pactuado vs Realizado",
+          "chave": "pactuado-vs-realizado"
+        },
+        {
+          "titulo": "TABNET - Apresentados e Aprovados -G3",
+          "id": "55a8e39cfb13970fe535",
+          "oculta": false,
+          "base": "TABNET - Apresentados e Aprovados",
+          "chave": "tabnet-apresentados-e-aprovados"
+        },
+        {
+          "titulo": "TABNET - Migração -G3",
+          "id": "b1d0679f30d4ed3b57c0",
+          "oculta": false,
+          "base": "TABNET - Migração",
+          "chave": "tabnet-migracao"
+        },
+        {
+          "titulo": "e-SUS Monitoramento -G3",
+          "id": "2c3c0ef84ba3e7b83782",
+          "oculta": false,
+          "base": "e-SUS Monitoramento",
+          "chave": "e-sus-monitoramento"
+        },
+        {
+          "titulo": "Monitoramento Produção -G3",
+          "id": "547d956addcdaf451f3c",
+          "oculta": false,
+          "base": "Monitoramento Produção",
+          "chave": "monitoramento-producao"
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "gestor": "G4",
+      "municipio": "Japeri",
+      "pagina_entrada": "f1f3cd939b4868fbe2dd",
+      "paginas": [
+        {
+          "titulo": "Pactuado vs Realizado -G4",
+          "id": "f1f3cd939b4868fbe2dd",
+          "oculta": false,
+          "base": "Pactuado vs Realizado",
+          "chave": "pactuado-vs-realizado"
+        },
+        {
+          "titulo": "TABNET - Apresentados e Aprovados -G4",
+          "id": "79a50c1d73eb05a629ab",
+          "oculta": false,
+          "base": "TABNET - Apresentados e Aprovados",
+          "chave": "tabnet-apresentados-e-aprovados"
+        },
+        {
+          "titulo": "TABNET - Migração -G4",
+          "id": "b6eb78a39c7aaebb5616",
+          "oculta": false,
+          "base": "TABNET - Migração",
+          "chave": "tabnet-migracao"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "gestor": "G5",
+      "municipio": "Magé",
+      "pagina_entrada": "1c691e3e3c148eaa707b",
+      "paginas": [
+        {
+          "titulo": "Pactuado vs Realizado -G5",
+          "id": "1c691e3e3c148eaa707b",
+          "oculta": false,
+          "base": "Pactuado vs Realizado",
+          "chave": "pactuado-vs-realizado"
+        },
+        {
+          "titulo": "TABNET - Apresentados e Aprovados -G5",
+          "id": "fb969c5d084e8e39ff95",
+          "oculta": false,
+          "base": "TABNET - Apresentados e Aprovados",
+          "chave": "tabnet-apresentados-e-aprovados"
+        },
+        {
+          "titulo": "TABNET - Migração -G5",
+          "id": "1ed4678bf31619180efa",
+          "oculta": false,
+          "base": "TABNET - Migração",
+          "chave": "tabnet-migracao"
+        },
+        {
+          "titulo": "e-SUS Monitoramento -G5",
+          "id": "b32b2b67849d89c980c1",
+          "oculta": false,
+          "base": "e-SUS Monitoramento",
+          "chave": "e-sus-monitoramento"
+        },
+        {
+          "titulo": "Monitoramento Produção -G5",
+          "id": "13a820bd76590a8c532a",
+          "oculta": false,
+          "base": "Monitoramento Produção",
+          "chave": "monitoramento-producao"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "gestor": "G6",
+      "municipio": "Mesquita",
+      "pagina_entrada": "eadca8dc49cb256b87fe",
+      "paginas": [
+        {
+          "titulo": "Pactuado vs Realizado -G6",
+          "id": "eadca8dc49cb256b87fe",
+          "oculta": false,
+          "base": "Pactuado vs Realizado",
+          "chave": "pactuado-vs-realizado"
+        },
+        {
+          "titulo": "TABNET - Apresentados e Aprovados -G6",
+          "id": "e03953aaf8f57f7dcbf7",
+          "oculta": false,
+          "base": "TABNET - Apresentados e Aprovados",
+          "chave": "tabnet-apresentados-e-aprovados"
+        },
+        {
+          "titulo": "TABNET - Migração -G6",
+          "id": "98a67fa72133a20a7f7d",
+          "oculta": false,
+          "base": "TABNET - Migração",
+          "chave": "tabnet-migracao"
+        },
+        {
+          "titulo": "e-SUS Monitoramento -G6",
+          "id": "837f01d7991339aeff59",
+          "oculta": false,
+          "base": "e-SUS Monitoramento",
+          "chave": "e-sus-monitoramento"
+        },
+        {
+          "titulo": "Monitoramento Produção -G6",
+          "id": "d0a1ae9ea018f821f4b6",
+          "oculta": false,
+          "base": "Monitoramento Produção",
+          "chave": "monitoramento-producao"
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "gestor": "G7",
+      "municipio": "Nilópolis",
+      "pagina_entrada": "8f7b61ede8b8f67f786a",
+      "paginas": [
+        {
+          "titulo": "Pactuado vs Realizado -G7",
+          "id": "8f7b61ede8b8f67f786a",
+          "oculta": false,
+          "base": "Pactuado vs Realizado",
+          "chave": "pactuado-vs-realizado"
+        },
+        {
+          "titulo": "TABNET - Apresentados e Aprovados -G7",
+          "id": "a4f5669446a0df30d407",
+          "oculta": false,
+          "base": "TABNET - Apresentados e Aprovados",
+          "chave": "tabnet-apresentados-e-aprovados"
+        },
+        {
+          "titulo": "TABNET - Migração -G7",
+          "id": "6fcf50a389cdcfad8247",
+          "oculta": false,
+          "base": "TABNET - Migração",
+          "chave": "tabnet-migracao"
+        },
+        {
+          "titulo": "e-SUS Monitoramento -G7",
+          "id": "7335eec4dbef3eec7015",
+          "oculta": false,
+          "base": "e-SUS Monitoramento",
+          "chave": "e-sus-monitoramento"
+        },
+        {
+          "titulo": "Monitoramento Produção -G7",
+          "id": "01a495a4840c5b24a988",
+          "oculta": false,
+          "base": "Monitoramento Produção",
+          "chave": "monitoramento-producao"
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "gestor": "G8",
+      "municipio": "Nova Iguaçu",
+      "pagina_entrada": "3aa9c8d6000f44fbd814",
+      "paginas": [
+        {
+          "titulo": "Pactuado vs Realizado -G8",
+          "id": "3aa9c8d6000f44fbd814",
+          "oculta": false,
+          "base": "Pactuado vs Realizado",
+          "chave": "pactuado-vs-realizado"
+        },
+        {
+          "titulo": "TABNET - Apresentados e Aprovados -G8",
+          "id": "3d2008c3531962178434",
+          "oculta": false,
+          "base": "TABNET - Apresentados e Aprovados",
+          "chave": "tabnet-apresentados-e-aprovados"
+        },
+        {
+          "titulo": "TABNET - Migração -G8",
+          "id": "6583a7f2dcad434c1ed7",
+          "oculta": false,
+          "base": "TABNET - Migração",
+          "chave": "tabnet-migracao"
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "gestor": "G9",
+      "municipio": "Queimados",
+      "pagina_entrada": "2e831101b4492eef6489",
+      "paginas": [
+        {
+          "titulo": "Pactuado vs Realizado -G9",
+          "id": "2e831101b4492eef6489",
+          "oculta": false,
+          "base": "Pactuado vs Realizado",
+          "chave": "pactuado-vs-realizado"
+        },
+        {
+          "titulo": "TABNET - Apresentados e Aprovados -G9",
+          "id": "7602f63ec2bfb49b0f72",
+          "oculta": false,
+          "base": "TABNET - Apresentados e Aprovados",
+          "chave": "tabnet-apresentados-e-aprovados"
+        },
+        {
+          "titulo": "TABNET - Migração -G9",
+          "id": "27454c406e3f4e79365d",
+          "oculta": false,
+          "base": "TABNET - Migração",
+          "chave": "tabnet-migracao"
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "gestor": "G10",
+      "municipio": "Rio de Janeiro",
+      "pagina_entrada": "aab3621ec24a7e88d5ff",
+      "paginas": [
+        {
+          "titulo": "Pactuado vs Realizado -G10",
+          "id": "aab3621ec24a7e88d5ff",
+          "oculta": false,
+          "base": "Pactuado vs Realizado",
+          "chave": "pactuado-vs-realizado"
+        },
+        {
+          "titulo": "TABNET - Apresentados e Aprovados -G10",
+          "id": "48d07ea0d55213070889",
+          "oculta": false,
+          "base": "TABNET - Apresentados e Aprovados",
+          "chave": "tabnet-apresentados-e-aprovados"
+        },
+        {
+          "titulo": "TABNET - Migração -G10",
+          "id": "611aa4b5105902701189",
+          "oculta": false,
+          "base": "TABNET - Migração",
+          "chave": "tabnet-migracao"
+        }
+      ]
+    },
+    {
+      "n": 11,
+      "gestor": "G11",
+      "municipio": "São João de Meriti",
+      "pagina_entrada": "e074cad8e6e23ea57a1f",
+      "paginas": [
+        {
+          "titulo": "Pactuado vs Realizado -G11",
+          "id": "e074cad8e6e23ea57a1f",
+          "oculta": false,
+          "base": "Pactuado vs Realizado",
+          "chave": "pactuado-vs-realizado"
+        },
+        {
+          "titulo": "TABNET - Apresentados e Aprovados -G11",
+          "id": "087c8a1e8b4f45f2d251",
+          "oculta": false,
+          "base": "TABNET - Apresentados e Aprovados",
+          "chave": "tabnet-apresentados-e-aprovados"
+        },
+        {
+          "titulo": "TABNET - Migração -G11",
+          "id": "568193ca141bf9f44b70",
+          "oculta": false,
+          "base": "TABNET - Migração",
+          "chave": "tabnet-migracao"
+        },
+        {
+          "titulo": "e-SUS Monitoramento -G11",
+          "id": "fdd1d37325044fbe0405",
+          "oculta": false,
+          "base": "e-SUS Monitoramento",
+          "chave": "e-sus-monitoramento"
+        },
+        {
+          "titulo": "Monitoramento Produção -G11",
+          "id": "d68b70710ffb947e33c1",
+          "oculta": false,
+          "base": "Monitoramento Produção",
+          "chave": "monitoramento-producao"
+        }
+      ]
+    },
+    {
+      "n": 12,
+      "gestor": "G12",
+      "municipio": "Seropédica",
+      "pagina_entrada": "9241600ce02f75d1fc16",
+      "paginas": [
+        {
+          "titulo": "Pactuado vs Realizado -G12",
+          "id": "9241600ce02f75d1fc16",
+          "oculta": false,
+          "base": "Pactuado vs Realizado",
+          "chave": "pactuado-vs-realizado"
+        },
+        {
+          "titulo": "TABNET - Apresentados e Aprovados -G12",
+          "id": "50b27ddb056e0e52e4ac",
+          "oculta": false,
+          "base": "TABNET - Apresentados e Aprovados",
+          "chave": "tabnet-apresentados-e-aprovados"
+        },
+        {
+          "titulo": "TABNET - Migração -G12",
+          "id": "a7053a4233788d5d4871",
+          "oculta": false,
+          "base": "TABNET - Migração",
+          "chave": "tabnet-migracao"
+        },
+        {
+          "titulo": "e-SUS Monitoramento -G12",
+          "id": "5e0107815a1d52b93eaa",
+          "oculta": false,
+          "base": "e-SUS Monitoramento",
+          "chave": "e-sus-monitoramento"
+        },
+        {
+          "titulo": "Monitoramento Produção -G12",
+          "id": "6d6ee65a20ccb307b512",
+          "oculta": false,
+          "base": "Monitoramento Produção",
+          "chave": "monitoramento-producao"
+        }
+      ]
+    }
+  ],
+  "paginas_comuns": [
+    {
+      "titulo": "INFO",
+      "id": "51742430d3abcc915c21",
+      "oculta": true
+    },
+    {
+      "titulo": "CNES - Diagnóstico de Profissionais ",
+      "id": "219f84f3c1125ce11eca",
+      "oculta": true
+    },
+    {
+      "titulo": "Toof PxInf",
+      "id": "41c13af37908759c99bc",
+      "oculta": true
+    },
+    {
+      "titulo": "Toof cnes",
+      "id": "fb0ab3bb41386c099e24",
+      "oculta": true
+    }
+  ],
+  "paginas_master": [
+    {
+      "titulo": "Pactuado vs Realizado -M",
+      "id": "3c4e3180fbe726d887e0",
+      "oculta": false,
+      "base": "Pactuado vs Realizado"
+    },
+    {
+      "titulo": "TABNET - Apresentados e Aprovados -M",
+      "id": "6989489967b8b3e72bed",
+      "oculta": false,
+      "base": "TABNET - Apresentados e Aprovados"
+    },
+    {
+      "titulo": "TABNET - Migração -M",
+      "id": "5a8b4f342f91cafcd2d9",
+      "oculta": false,
+      "base": "TABNET - Migração"
+    },
+    {
+      "titulo": "e-SUS Monitoramento -M",
+      "id": "38b836569ac790a54640",
+      "oculta": false,
+      "base": "e-SUS Monitoramento"
+    },
+    {
+      "titulo": "Monitoramento Produção -M",
+      "id": "f330ba0b00939e33769d",
+      "oculta": false,
+      "base": "Monitoramento Produção"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "usuarios": {
+    "belfordroxo": {
+      "nome": "Belford Roxo",
+      "senha": "scrypt$T1kajKpjHGtnuJUoi4z01A==$Vg1iMvMNmO/2hvQsIrzOxon1kLn4zHyBK8EhJA+u0Y17KaTJAFLlZY5+krwARkyqNTa0yLuejXgIj7diOyGcTQ==",
+      "gestores": [
+        "G1"
+      ]
+    },
+    "caxias": {
+      "nome": "Duque de Caxias",
+      "senha": "scrypt$+DWffJ1ENGCSBkZDoq0Tyg==$j97FBqSjM+PY9w7ZmyQS9GdKeILrNNLc9VUBjpL7smeALt1oDfCuZvxbPXufrnQWyxOzCzYOxdUbxmmAJzdi4g==",
+      "gestores": [
+        "G2"
+      ]
+    },
+    "cisbaf": {
+      "nome": "CISBAF",
+      "senha": "scrypt$mXgBEUn+oLKRcaFN7sfH/Q==$fxFbWpt/bg8fnv1iePQULt/+xUdeg4Xw8+8JRzX1YLezXqSTUjC/RIcg7YKRaWkGWlyJ+sPtKZcUBqXEvjkGLQ==",
+      "master": true
+    },
+    "itaguai": {
+      "nome": "Itaguaí",
+      "senha": "scrypt$3OZvhrf37AtPb2Zu8gMb2w==$k7v/0Cdjr2wE62yj0mkhwRp+iI9Kj57SdBB8kHb3tmlkAVPQbDACRU7mP675/kOgrSbuUDA7oexFG813iod89A==",
+      "gestores": [
+        "G3"
+      ]
+    },
+    "japeri": {
+      "nome": "Japeri",
+      "senha": "scrypt$BwAON91+5c/QBW4Lc3FVgw==$KjSRsjgyCYwZ8mflxZVLIa0hLOZTSMR6e6l+o8n6RilwPgSEa9oIIrGe18keiPUO47hJMftjupCd1eC3ekOhcg==",
+      "gestores": [
+        "G4"
+      ]
+    },
+    "mage": {
+      "nome": "Magé",
+      "senha": "scrypt$cbD7s9+h3z2n5E/Bf1VEWw==$luQd2vYu5nTXKzuYcx5EsNIYWi9JCbal9JBTpnGXIiqPAU2Smk9HzppuR/GYUeFuNePaklAgLLkbuLKxLA+rfA==",
+      "gestores": [
+        "G5"
+      ]
+    },
+    "mesquita": {
+      "nome": "Mesquita",
+      "senha": "scrypt$g5SnkQ1EVPZ8XaX0XhQvyQ==$t8LrePw1KRhjWRjEWVqXesLPV+q99nxyjHummOlR1+YobmI94jYJfd/g7KqaKh95afgZDQjnECalm1B5gYUJFw==",
+      "gestores": [
+        "G6"
+      ]
+    },
+    "nilopolis": {
+      "nome": "Nilópolis",
+      "senha": "scrypt$Mroe8KIdpPT6akt5Aa8NmQ==$yUVdZ2wnrgi5gZ1yFWgJoikT0NhaeC5kfT1KN/z6JZ0weYLdzyUgva2JR+HUj6PDB95CUQQ4yMT3pFAeitQJ1A==",
+      "gestores": [
+        "G7"
+      ]
+    },
+    "novaiguacu": {
+      "nome": "Nova Iguaçu",
+      "senha": "scrypt$1/UIgZaISkWgr4CFDihHnQ==$xrFsk7saDcaFtBSeaoaT1bC3fzx8U6A8B4rWgmTlmMyXHSW4D4BtadykkL9hHvtzsK0MwaUlyXoHb7Ymdvekzg==",
+      "gestores": [
+        "G8"
+      ]
+    },
+    "queimados": {
+      "nome": "Queimados",
+      "senha": "scrypt$crvX8+fJn9pSOep2O6ubBQ==$WRb8bi5zSCabBarU2cs78EwpsTUXpTz+VivQ+NwcrxgaGKFYCE6ocuIe3qYIz0VFe92E50h5iO1PrmJq41IVPQ==",
+      "gestores": [
+        "G9"
+      ]
+    },
+    "riodejaneiro": {
+      "nome": "Rio de Janeiro",
+      "senha": "scrypt$19K/g3ZBSi1/mwNoCAIg4g==$qx+UbgfEBk8PO7YLOo6cf8xda9U6T0yfa8yvCPFtUDpGhSjnacHs4ERX70sc9F43yHKiKQ0obY07aw1tw2tbeA==",
+      "gestores": [
+        "G10"
+      ]
+    },
+    "saojoao": {
+      "nome": "São João de Meriti",
+      "senha": "scrypt$7COi5h9Dxd1QLqlxp3ueCQ==$jc9MjB+z0eO1zld+UxgW9M2Z0bUcRJtRG9Fs+FL/7mbBVdSxKRuO9iEQPLmnzu+2iR9eGU9TW9SRIlRG5g0ibw==",
+      "gestores": [
+        "G11"
+      ]
+    },
+    "seropedica": {
+      "nome": "Seropédica",
+      "senha": "scrypt$f83RYCBXIJscLEbDBHY6fg==$R6r+tD3F3G57ArhtPaoWfWEEHDPXvOncxL7iTzeuFbogp7RPlMX1IO0UzRHTJ+HQ8+YCRdTDLnn4bmHNPE8dsQ==",
+      "gestores": [
+        "G12"
+      ]
+    }
+  }
+}

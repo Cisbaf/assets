@@ -4,6 +4,7 @@ const app = express();
 const cors = require('cors');
 
 const { LoadFiles, GetPathAfterPublic, Ofuscar, UnionFiles } = require("./utils.js");
+const gestoresApi = require("./src/gestores/router.js");
 
 app.use(express.static(__dirname + '/src/assets'));
 app.use(cors());
@@ -31,6 +32,12 @@ servePage("/nag", ["index.html"], ["backdrop.js", "floating.js", "menu.js", "ses
         ['style.css', 'login.css', 'menu.css', 'divFloating.css'],
         ["select-municipio.js"]
         );
+
+// Rota Painel dos Gestores (Power BI) — login e acessos validados no servidor
+app.use("/gestores/api", gestoresApi);
+servePage("/gestores", ["index.html"], ["icones.js", "api.js", "visualizador.js", "painel.js", "login.js"], ["style.css"]);
+serveFile("/gestores/logo", GetPathAfterPublic("nag/assets/img/cisbaf_logo.png"));
+serveFile("/gestores/fav", GetPathAfterPublic("nag/assets/img/favicon.ico"));
 
 // Rota Indicadores
 servePage("/relatorios", ["index.html"], ["script.js"], ["style.css"]);

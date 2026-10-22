@@ -1,0 +1,40 @@
+{
+  "titulo": "Painel dos Gestores",
+  "subtitulo": "Núcleo de Apoio à Gestão",
+  "powerbi": {
+    "r": "eyJrIjoiNDA5NjIyY2MtMjk3Yy00YjcyLTg1NDktNjQ2NjgwOWNmZjA0IiwidCI6ImU3NjcxOWI5LTA2NjQtNDZkOC04YzVmLWFhMTJlNTcyOTkwMyJ9",
+    "recorteRodapePx": 37
+  },
+  "sessaoHoras": 12,
+  "visaoMaster": {
+    "id": "M",
+    "nome": "Todos os municípios"
+  },
+  "secoes": {
+    "pactuado-vs-realizado": {
+      "titulo": "Pactuado vs Realizado",
+      "curto": "Pactuado",
+      "icone": "target"
+    },
+    "tabnet-apresentados-e-aprovados": {
+      "titulo": "TABNET - Apresentados e Aprovados",
+      "curto": "Apresentados e Aprovados",
+      "icone": "check"
+    },
+    "tabnet-migracao": {
+      "titulo": "TABNET - Migração",
+      "curto": "Migração",
+      "icone": "route"
+    },
+    "e-sus-monitoramento": {
+      "titulo": "e-SUS Monitoramento",
+      "curto": "e-SUS",
+      "icone": "pulse"
+    },
+    "monitoramento-producao": {
+      "titulo": "Monitoramento Produção",
+      "curto": "Produção",
+      "icone": "chart"
+    }
+  }
+}

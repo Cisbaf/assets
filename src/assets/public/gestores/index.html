@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Painel dos Gestores · CISBAF</title>
+    <link rel="icon" type="image/x-icon" href="/gestores/fav">
+<style></style>
+</head>
+<body data-tela="carregando">
+
+    <!-- Carregamento inicial -->
+    <div class="tela-inicial" aria-hidden="true">
+        <img src="/gestores/logo" alt="">
+        <span class="spinner"></span>
+    </div>
+
+    <!-- Login -->
+    <section id="tela-login" class="tela-login" hidden>
+        <aside class="login-marca">
+            <div class="login-marca-conteudo">
+                <span class="selo">Núcleo de Apoio à Gestão</span>
+                <h1>Painel dos Gestores</h1>
+                <p>Acompanhe os indicadores do seu município em um só lugar, com dados atualizados do SUS.</p>
+                <ul class="login-lista">
+                    <li><span data-icone="target"></span>Pactuado vs Realizado</li>
+                    <li><span data-icone="check"></span>TABNET — Apresentados e Aprovados</li>
+                    <li><span data-icone="route"></span>TABNET — Migração</li>
+                    <li><span data-icone="pulse"></span>e-SUS Monitoramento</li>
+                    <li><span data-icone="chart"></span>Monitoramento da Produção</li>
+                </ul>
+            </div>
+            <span class="login-aneis" aria-hidden="true"></span>
+        </aside>
+
+        <main class="login-area">
+            <form id="form-login" class="login-card" novalidate>
+                <img class="login-logo" src="/gestores/logo" alt="CISBAF">
+                <h2>Entrar</h2>
+                <p class="login-sub">Use o acesso fornecido para o seu município.</p>
+
+                <label class="campo">
+                    <span>Usuário</span>
+                    <input id="login-usuario" name="usuario" type="text" autocomplete="username"
+                           autocapitalize="none" spellcheck="false" required>
+                </label>
+
+                <label class="campo">
+                    <span>Senha</span>
+                    <span class="campo-senha">
+                        <input id="login-senha" name="senha" type="password" autocomplete="current-password" required>
+                        <button type="button" id="ver-senha" class="btn-icone" aria-label="Mostrar senha" aria-pressed="false">
+                            <span data-icone="eye"></span>
+                        </button>
+                    </span>
+                    <small id="aviso-caps" class="aviso-caps" hidden>Caps Lock está ativado</small>
+                </label>
+
+                <p id="login-erro" class="login-erro" role="alert" hidden></p>
+
+                <button id="btn-entrar" type="submit" class="btn-primario">
+                    <span class="btn-texto">Entrar</span>
+                    <span class="spinner spinner-claro" aria-hidden="true"></span>
+                </button>
+
+                <footer class="login-rodape">© <span class="ano-atual"></span> CISBAF · Consórcio Intermunicipal de Saúde da Baixada Fluminense</footer>
+            </form>
+        </main>
+    </section>
+
+    <!-- Painel -->
+    <section id="tela-painel" class="tela-painel" hidden>
+        <header class="topo">
+            <div class="topo-esq">
+                <img class="topo-logo" src="/gestores/logo" alt="CISBAF">
+                <span class="topo-sep" aria-hidden="true"></span>
+                <button id="btn-visao" class="seletor-visao" type="button" aria-haspopup="listbox" aria-expanded="false">
+                    <span data-icone="pin" class="seletor-visao-icone"></span>
+                    <span class="seletor-visao-textos">
+                        <small id="visao-rotulo">Município</small>
+                        <strong id="visao-nome"></strong>
+                    </span>
+                    <span data-icone="chevron" class="seletor-visao-seta"></span>
+                </button>
+            </div>
+
+            <nav id="abas" class="abas" role="tablist" aria-label="Páginas do painel">
+                <span class="abas-indicador" aria-hidden="true"></span>
+            </nav>
+
+            <div class="topo-acoes">
+                <button id="btn-recarregar" class="btn-icone" type="button" title="Recarregar página (R)" aria-label="Recarregar página">
+                    <span data-icone="refresh"></span>
+                </button>
+                <button id="btn-foco" class="btn-icone" type="button" title="Modo foco: esconder menu (F)" aria-label="Esconder menu">
+                    <span data-icone="collapse"></span>
+                </button>
+                <button id="btn-tela-cheia" class="btn-icone" type="button" title="Tela cheia" aria-label="Tela cheia">
+                    <span data-icone="expand"></span>
+                </button>
+                <button id="btn-usuario" class="avatar" type="button" aria-haspopup="menu" aria-expanded="false" aria-label="Menu do usuário"></button>
+            </div>
+        </header>
+
+        <main id="palco" class="palco">
+            <div id="palco-estado" class="palco-estado" data-estado="carregando">
+                <div class="esqueleto" aria-hidden="true">
+                    <span class="esq esq-titulo"></span>
+                    <span class="esq-linha">
+                        <span class="esq"></span><span class="esq"></span><span class="esq"></span><span class="esq"></span>
+                    </span>
+                    <span class="esq-linha esq-cards">
+                        <span class="esq"></span><span class="esq"></span><span class="esq"></span>
+                    </span>
+                    <span class="esq esq-bloco"></span>
+                </div>
+                <div class="palco-msg">
+                    <span class="spinner"></span>
+                    <strong id="palco-titulo">Carregando…</strong>
+                    <small id="palco-detalhe">Preparando o relatório</small>
+                    <button id="btn-tentar" class="btn-secundario" type="button" hidden>Tentar novamente</button>
+                </div>
+            </div>
+        </main>
+
+        <button id="btn-sair-foco" class="sair-foco" type="button">
+            <span data-icone="chevron"></span> Mostrar menu
+        </button>
+    </section>
+
+    <!-- Seletor de município -->
+    <div id="pop-visao" class="popover popover-visao" hidden>
+        <div class="busca">
+            <span data-icone="search"></span>
+            <input id="busca-visao" type="search" placeholder="Buscar município…" autocomplete="off"
+                   aria-label="Buscar município" aria-controls="lista-visao">
+        </div>
+        <ul id="lista-visao" class="lista-visao" role="listbox" aria-label="Municípios"></ul>
+    </div>
+
+    <!-- Menu do usuário -->
+    <div id="pop-usuario" class="popover popover-usuario" role="menu" hidden>
+        <div class="usuario-info">
+            <strong id="usuario-nome"></strong>
+            <small id="usuario-login"></small>
+        </div>
+        <div class="atalhos">
+            <span><kbd>1</kbd>–<kbd>9</kbd> trocar página</span>
+            <span><kbd>F</kbd> modo foco</span>
+            <span><kbd>R</kbd> recarregar</span>
+        </div>
+        <button id="btn-sair" class="item-menu" type="button" role="menuitem">
+            <span data-icone="logout"></span> Sair
+        </button>
+    </div>
+
+    <div id="avisos" class="avisos" aria-live="polite"></div>
+
+    <script></script>
+</body>
+</html>

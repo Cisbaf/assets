@@ -10,8 +10,9 @@ function Ofuscar(html, js, css) {
         controlFlowFlattening: true, // Dificulta a lógica do código
     }).getObfuscatedCode();
 
-    html = html.replace("<style></style>", `<style>${css}</style>`)
-    return html.replace("<script></script>", `<script>${obfuscatedCode}</script>`);
+    // Função na substituição evita que "$&", "$'" etc. do código sejam interpretados pelo replace
+    html = html.replace("<style></style>", () => `<style>${css}</style>`)
+    return html.replace("<script></script>", () => `<script>${obfuscatedCode}</script>`);
 }
 
 

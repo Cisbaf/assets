@@ -1,4 +1,3 @@
-
 services:
   assets:
     container_name: servidor-assets
@@ -6,3 +5,6 @@ services:
     restart: always
     ports:
       - "${ASSETS_PORT}:8000"
+    environment:
+      # Segredo que assina as sessões do Painel dos Gestores (defina no .env; sem ele, todos deslogam a cada reinício)
+      - GESTORES_SESSION_SECRET=${GESTORES_SESSION_SECRET}
